@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+
+    /* colors */
+
+    --clr-greyscale-0:#F2F4F8;
+    --clr-greyscale-2: #F2F4F8;
+    --clr-greyscale-4: #AEBCC6;
+    --clr-greyscale-6: #7E8385;
+    --clr-greyscale-8: #1E2020;
+
+    --clr-primary-darkblue: #16215B;
+    --clr-primary-blue: #1F299C;
+    --clr-primary-lightblue: #0373FF;
+
+    --clr-secondary-red: #FF4242;
+    --clr-secondary-cyan: #30D1FF;
+
+    /* fonts */
+
+    font-family: 'Geologica', sans-serif;
+
+    /* headings */
+
+    --fs-h1: 3.75rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2.25rem;
+    --fs-h4: 2rem;
+    --fs-h5: 1.5rem;
+
+    /* body */
+
+    --fs-leed24: 1.5rem;
+    --fs-leed20: 1.25rem;
+    --fs-body16: 1rem;
+    --fs-body14: 0.875rem;
+
+    /* card */
+
+    --fs-card12: 0.75rem;
+    --fs-card-tag: 0.7815rem;
+    --fs-card-price: 1rem;
+
+    /* width */
+
+    --content-width-1280: 76rem; /* 1216px */
+    --content-width-720: 40.8331rem; /* 653.33px ? */
+
+}
+
+h1,h2,h3,h4,h5 {
+    line-height: 110%;
+    font-weight: 500;
+    color: var(--clr-primary-darkblue);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+    line-height: 115%;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-h3);
+}
+
+h4 {
+    font-size: var(--fs-h4);
+}
+
+h5 {
+    font-size: var(--fs-h5);
+}
+
+
+
+/* CAROUSEL AKA SCROLLER */
+
+
+
+.carousel-container {
+    outline: 2px solid rgb(158, 158, 158);
+    width: 1000px; /* change me */
+    position: relative;
+}
+
+.carousel-wrap {
+    gap: 2rem;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    padding-bottom: 28px;
+}
+
+.carousel-controls {
+    position: absolute;
+    display: flex;
+    gap: 2px;
+    bottom: 00px;
+}
+
+.carousel-controls span {
+    display: block;
+    width: 0.412rem;
+    height: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: var(--clr-primary-darkblue);
+}
+
+.carousel-controls .active-point {
+    width: 3.25rem;
+}
+
+.snapsinline {
+    scroll-snap-type: x mandatory;
+}
+
+.snapsinline > * {
+    scroll-snap-align: start;
+}
+
+
+
+/* DOUBLE SLIDERS */
+
+.slider-container,.slider-wrap {
+    /* set needed width */
+    width: 500px;
+}
+
+.noUi-handle:after, .noUi-handle:before {
+    display: none;
+}
+
+.noUi-connects {
+    outline: none ;
+    height: 2px;
+}
+
+.noUi-target {
+    --_slider-inner-width: 97%;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    transform: translateY(39px);
+    background-color: none;
+    border: none;
+}
+
+.noUi-base,.noUi-target {
+    height: 2px ;
+    width: var(--_slider-inner-width);
+}
+
+.slider-wrap {
+    background-color: var(--clr-greyscale-0);
+    border-radius: .5rem;
+    height: 40px;
+    position: absolute;  
+}
+
+.noUi-horizontal .noUi-handle {
+    background-color: var(--clr-primary-darkblue);
+    width: 12px;
+    height: 12px;
+    box-shadow: none;
+    border: none;
+    border-radius: 1487px;
+    transform: translateX(-5px);
+
+}
+
+.double-slider-type {
+    color: var(--clr-greyscale-4);
+    font-weight: var(--fs-body14);
+}
+
+.slider-val-wrap {
+    color: var(--clr-primary-darkblue);
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

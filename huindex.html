@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <title>MSR</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="lib/nouislider.min.css">
+    <link rel="stylesheet" href="style/default.css">
+    <script src="lib/nouislider.min.js"></script>
+    <script src="lib/dragscroll.js"></script>
+
+
+    <!-- testing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body style="background-color: grey;">
+
+    <main style="width: 1000px; margin: 0 auto;">
+
+    <h1>Заголовонек <br> с переносичком</h1>
+    <h2>Заголовонек <br> с переносичком</h2>
+    <h3>Заголовонек <br> с переносичком</h3>
+    <h4>Заголовонек <br> с переносичком</h4>
+    <h5>Заголовонек <br> с переносичком</h5>
+
+
+
+
+    <div style="margin-block: 2.5rem;"><br></div>
+
+    <!-- DRAGGABLE CAROUSEL CAROUSEL HTML -->
+
+    <div class="carousel-container">
+        
+        <div class=" carousel-wrap dragscroll snapsinline" id="carousel_001">
+
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+            <div><img src="https://placekitten.com/g/300/500" alt=""></div>
+
+        </div>
+
+        <div class="carousel-controls" id="carousel_001_controls">
+            <span class="active-point"></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+            <span class=""></span>
+        </div>
+
+
+    </div>
+
+    <!-- DRAGGABLE CAROUSEL CAROUSEL STYLE -->
+
+    <style>
+
+
+    </style>
+
+    <!-- DRAGGABLE CAROUSEL CAROUSEL CODE -->
+
+    <script>
+
+// var scroller01 = document.querySelector('#carousel_001')
+
+// if (document.querySelector('#carousel_001_controls')) {
+//     console.log('cock')
+//     var scroller01controls = document.querySelector('#carousel_001_controls').children
+//     scroller01.addEventListener('scroll', () => {
+//         updateScrollerControls(scroller01, scroller01controls)
+//     })
+
+//     for (let i = 0; i < scroller01controls.length; i++) {
+//         scroller01controls[i].addEventListener('click', () => {
+//             clickScrollerControls(scroller01, scroller01controls, i)
+//         })
+//     }
+// }
+
+    
+    </script>
+
+
+    <!-- CAROUSEL END -->
+
+    <div style="margin-block: 2.5rem;"><br></div>
+
+
+
+    <div style="display: grid; grid-template-columns: repeat(3,1fr);">
+
+
+
+
+
+    <!-- SLIDER WITH 2 POINTS -->
+
+    <div class="slider-container">
+
+        <span class="double-slider-type">Стоимость, млн Р</span>
+
+        <div class="slider-wrap">  
+            <div class="slider-val-wrap">
+                <span id="sliderID-lower" class="slider-val"></span>
+                <span id="sliderID-upper" class="slider-val"></span>
+            </div>
+            <div id="sliderID" class="slider"></div>
+
+
+        </div>
+
+    </div>
+
+    </div>  
+
+    <!-- SLIDER WITH 2 POINT STYLES -->
+
+    <style>
+
+        
+    </style>
+
+    <!-- DOUBLE SLIDER CODE -->
+
+    <script>
+        
+        // kek
+        // sliderInit('sliderID','sliderID-lower', 'sliderID-upper' )
+
+    </script>
+
+
+    <!-- DOUBLE SLIDER END -->
+
+    <div style="margin-block: 5rem;"></div>
+
+    </main>
+    
+
+    <script src="script/script.js"></script>
+    <script src="script/scrollers.js"></script>
+    <script src="script/sliders.js"></script>
+</body>
+</html>
