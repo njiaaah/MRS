@@ -4,7 +4,7 @@ body {
 
     /* colors */
 
-    --clr-greyscale-0:#F2F4F8;
+    --clr-greyscale-0:#FFFFFF;
     --clr-greyscale-2: #F2F4F8;
     --clr-greyscale-4: #AEBCC6;
     --clr-greyscale-6: #7E8385;
@@ -46,8 +46,27 @@ body {
 
     --content-width-1280: 76rem; /* 1216px */
     --content-width-720: 40.8331rem; /* 653.33px ? */
-
+    --content-width-320: 19rem; /* 304px ? */
+    --content-width: clamp(var(--content-width-720), -4.3886rem + 100.4857vw, var(--content-width-1280));
 }
+
+@media screen and (max-width: 720px) {
+    body {
+        --content-width: clamp(var(--content-width-320), 1.536rem + 87.32vw, var(--content-width-720));
+    }
+}
+
+section {
+    width: 100%;
+}
+
+.section-wrap {
+    margin: 0 auto;
+    width: var(--content-width);
+    overflow: hidden;
+}
+
+
 
 h1,h2,h3,h4,h5 {
     line-height: 110%;
@@ -76,6 +95,8 @@ h5 {
     font-size: var(--fs-h5);
 }
 
+
+/* WIDTHS */
 
 
 /* CAROUSEL AKA SCROLLER */
@@ -172,7 +193,6 @@ h5 {
     border: none;
     border-radius: 1487px;
     transform: translateX(-5px);
-
 }
 
 .double-slider-type {
@@ -190,4 +210,32 @@ h5 {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* BUTTONS */
+
+button, .btn {
+    font-family: Geologica;
+    outline: none;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.125rem;
+    padding: 0.6rem 1.635rem;
+    border-radius: 100px;
+    
+}
+
+.btn:not(input) {
+    cursor: pointer;
+}
+
+.btn-dark-blue {
+    background-color: var(--clr-primary-darkblue);
+    color: var(--clr-greyscale-0);
+}
+
+.btn-red {
+    color: var(--clr-greyscale-0);
+    background-color: var(--clr-secondary-red);
 }

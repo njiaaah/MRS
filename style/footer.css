@@ -1,0 +1,456 @@
+footer {
+    width: 100%;
+    background-color: var(--clr-primary-darkblue);
+    position: relative;
+    display: grid;
+}
+
+footer::before {
+    --_height: 16px;
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: var(--clr-greyscale-0);
+    width: 100%;
+    height: calc(var(--_height)*2);
+    border-radius: 0;
+        /* imho radiusy smotryatsa kak gavno na 1280px+ */
+        /* mojno ubrat strochku snizu */
+    border-radius: var(--_height);
+    transform: translateY(-50%);
+}
+
+footer .section-wrap { 
+    padding-top: 40px;
+}
+
+
+
+/* callback */
+
+.footer-callback-text-wrap-mobile {
+    display: none;
+}
+
+footer .section-wrap .footer-callback {
+    background-color: var(--clr-primary-lightblue);
+    border-radius: 1rem;
+    padding: 2.75rem 3.125rem 3.125rem 3.125rem;
+    display: flex;
+    gap: clamp(1.25rem, -6.9464rem + 18.2143vw, 7.625rem);
+}
+
+footer .section-wrap .footer-callback p {
+    font-size: 2.5rem;
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 0.2143rem + 2.8571vw, 2.5rem);
+    font-weight: 300;
+    line-height: 2.5rem;
+    display: flex;
+    color: var(--clr-greyscale-0);
+}
+
+footer .section-wrap .footer-callback p span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin-right: 16px;
+}
+
+.footer-callback form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.footer-callback-text-wrap p:first-child{
+    white-space: nowrap;
+}
+
+.footer-callback form input {
+    width: fit-content;
+    color: var(--clr-greyscale-0);
+}
+
+.footer-callback form input[type="text"] ,
+.footer-callback form input[type="tel"] {
+    width: 100%;
+    display: block;
+    background: none;
+    outline: 1px solid var(--clr-greyscale-0);
+}
+
+.footer-callback form input.btn-red {
+font-weight: 400;
+font-size: 1rem;
+line-height: 125%;
+}
+
+.footer-callback form input::placeholder {
+    color: 1px solid var(--clr-greyscale-0);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.9375rem;
+}
+
+/*  */
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr;
+    margin-top: 2.5rem;
+}
+
+.footer-main > * {
+    border-radius: 1.5rem;
+}
+
+.footer-main-left {
+    padding: 2.125rem 0rem 2.125rem 2.95rem ;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-primary-blue);
+}
+
+.footer-info-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    color: var(--clr-greyscale-0);
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 4.25rem;
+    gap: 4px;
+}
+
+.footer-info-wrap a {
+    color: var(--clr-secondary-cyan);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.875rem;
+    text-decoration: none;
+}
+
+.footer-info-wrap a:last-child {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.icons-wrap {
+    margin-top: 4.25rem;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.icons-wrap a {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    aspect-ratio: 1;
+    background-color: var(--clr-secondary-cyan);
+    border-radius: 100%;
+}
+
+.footer-main-right {
+    display: flex;
+    background-color: var(--clr-greyscale-0);
+    padding: 2rem 2rem 2.625rem 2rem;
+    gap: clamp(0.5rem, -3.3571rem + 8.5714vw, 2rem);
+}
+
+.footer-main-right > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-complex-list a{
+    color: var(--clr-primary-darkblue);
+    position: relative;
+}
+
+.footer-complex-list .tag::after {
+    display: block;
+    position: absolute;
+    font-size: 0.375rem;
+    font-weight: 700;
+    line-height: 0.5rem;
+    top: 50%;
+    right: -5px;
+    padding: 3.25px 7px 3.75px 7px;
+    background-color: var(--clr-secondary-red);
+    color: var(--clr-greyscale-0);
+    border-radius: 25px;
+    transform: translate(100%, -50%);
+}
+
+.after-1::after {
+    content: 'Новые помещения';
+}
+
+.after-2::after {
+    content: 'Скидка 10%';
+}
+
+.after-3::after {
+    content: 'Тимур';
+}
+
+.footer-main-right ul {
+    display: grid;
+    gap: 4px;
+}
+
+.footer-main-right ul li a {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-decoration: none;
+}
+
+.footer-about-list {
+    margin-top: -80px;
+}
+
+.footer-filter-list a {
+    color: var(--clr-secondary-cyan);
+}
+
+.footer-about-list a {
+    color: var(--clr-primary-darkblue);
+}
+
+.footer-main-right div div:last-of-type {
+    display: flex;
+    align-items: center;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+.footer-main-right input {
+    height: 3.75rem;
+    width: 16rem;
+    border-radius: 100px;
+    outline: none;
+    position: relative;
+    border: 1px solid var(--clr-primary-darkblue);
+    padding-left: 20px;
+}
+
+.footer-main-right input+svg {
+    transform: translateX(-45px);
+    cursor: pointer;
+}
+
+.footer-main-right input::placeholder {
+    /* font-family: RF Dewi; ???? */
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+}
+
+.footer-useless-info {
+    display: grid;
+    margin-top: 3.4787rem;
+    grid-template-columns: 1fr 1.4fr;
+    margin-bottom: 3.75rem;
+}
+
+.footer-useless-info .logo-wrap {
+    display: flex;
+    gap: 0.6875rem;
+}
+
+.footer-useless-info .footer-rights-reserved {
+    color: var(--clr-greyscale-0);
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.footer-rights-reserved p+p {
+    margin-top: .5rem;
+}
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+    footer::before {
+        border-radius: var(--_height);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+   .footer-main {
+    grid-template-columns: 1fr;
+   }
+
+   .footer-main-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
+
+   .footer-main-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
+   
+   .footer-info-wrap {
+    margin-top: 0;
+    margin-bottom: 0;
+   }
+
+   .icons-wrap {
+    grid-column: 2;
+    margin-top: 20px;
+   }
+}
+
+@media screen and (max-width: 840px) {
+    .footer-useless-info {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer::before {
+        --_height: 24px;
+        transform: translateY(-66%);
+    }
+
+    footer .section-wrap .footer-callback {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 2.5rem 1.75rem;
+    }
+
+    .footer-main-left {
+        padding: 2.5rem 1.75rem;
+    }
+
+    footer .section-wrap .footer-callback p {
+        font-size: 2.3125rem;
+        font-size: 1.75rem;
+        font-size: clamp(1.75rem, 0.4375rem + 3.75vw, 2.3125rem);
+    }
+
+    .footer-callback form input[type="text"], .footer-callback form input[type="tel"] {
+        width: min(100%, 350px) ;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer-main-right {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main-right > div {
+        display: grid;
+        gap: 115px;
+    }
+
+    .footer-main-right {
+        position: relative;
+    }
+
+    .footer-main-right div div:last-of-type {
+        position: absolute;
+        bottom: 40px;
+        width: var(--content-width);
+    }
+
+    .footer-about-list {
+        margin-bottom: 2rem;
+    }
+
+    .footer-complex-list {
+        margin-bottom: 6rem;
+    }
+
+    .footer-main-right input {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .footer-main-left {
+        grid-template-columns: 1fr;
+    }
+
+    .icons-wrap {
+        grid-column: 1;
+    }
+
+    .footer-info-wrap {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .footer-callback-text-wrap-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .footer-callback-text-wrap-mobile > div {
+        display: flex;
+        white-space: nowrap;
+    }
+
+    .footer-callback-text-wrap-mobile > div > span {
+        width: 32px;
+        aspect-ratio: 1;
+    }
+
+    .footer-callback-text-wrap {
+        display: none;
+    }
+    
+
+    footer .section-wrap .footer-callback p {
+        font-size: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.75rem;
+    }
+
+    .footer-callback-text-wrap p:first-child {
+        white-space: wrap;
+    }
+
+    .footer-callback-text-wrap span svg {
+        display: block;
+    }
+
+    
+    footer .section-wrap .footer-callback {
+        padding: 1.75rem 1rem;
+        gap: 2rem;
+    }
+
+    .footer-main-left,.footer-main-right {
+        padding: 1.75rem 1rem;
+    }
+
+    .footer-main {
+        margin-top: 0.75rem;
+    }
+    
+    .footer-useless-info {
+        margin-block: 2rem 2.5rem;
+        padding-inline: 1.5rem;
+    }
+
+    .footer-useless-info svg {
+        transform: scaleX(.95);
+        transform-origin: 0% 0%;
+    }
+}
