@@ -128,9 +128,6 @@
         transform: rotate(180deg);
     }
 
-
-
-
     #mobile-menu-label {
         display: none;
     }
@@ -139,6 +136,11 @@
         position: absolute;
         top: 0;
         left: 0;
+    }
+
+    .logo-wrap img {
+        width: 2.4375rem;
+        height: 2.9375rem;
     }
 
     @media screen and (max-width: 920px) {
@@ -168,6 +170,7 @@
 
         header {
             z-index: 15;
+            transition: background-color 500ms ease;
         }        
 
         #mobile-menu-toggle:checked ~ main header .header-menu  {
@@ -202,9 +205,9 @@
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px ;
             transition:
-            color 350ms ease,
-            transform 350ms ease,
-            opacity 250ms ease
+            color 500ms ease,
+            transform 500ms ease,
+            opacity 500ms ease
             ;
         }
         #mobile-menu-toggle:checked ~ main header {
