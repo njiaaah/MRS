@@ -235,6 +235,11 @@ button, .btn {
     color: var(--clr-greyscale-0);
 }
 
+.btn-blue {
+    background-color: var(--clr-primary-blue);
+    color: var(--clr-greyscale-0);
+}
+
 .btn-red {
     color: var(--clr-greyscale-0);
     background-color: var(--clr-secondary-red);

@@ -56,5 +56,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
+    // scroller - id враппера со скролл эелементами
+    // controls - id статус бара 
+
+    function scrollerInit(scroller, controls) {
+
+        var scoller = document.getElementById(scroller)
+        var controls = document.getElementById(controls)
+
+        if (controls) {
+            scroller01.addEventListener('scroll', () => {
+                updateScrollerControls(scoller, controls.children)
+            })
+    
+            for (let i = 0; i < controls.children.length; i++) {
+                controls.children[i].addEventListener('click', () => {
+                    clickScrollerControls(scoller, controls.children, i)
+                })
+            }
+        }
+
+    }
+
+    scrollerInit('carousel_002', 'carousel_002_controls')
+
 
 })
