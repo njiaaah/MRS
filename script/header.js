@@ -41,8 +41,32 @@ window.addEventListener('resize', ()=>{
     // header mobile menu
     if(window.innerWidth > 800 && mobileMenuChb.checked) {
         mobileMenuChb.checked = false
+        document.body.style.overflow = 'scroll'
     }
 })
+
+
+// backdrop click
+
+
+const headBackdrop = document.querySelector('#mobile-menu-backdrop') 
+
+headBackdrop.addEventListener('click',()=>{
+    if (mobileMenuChb.checked) {
+        mobileMenuChb.click()
+    }
+})
+
+// scroll disable if mobile menu open 
+
+mobileMenuChb.addEventListener('change' ,()=>{
+    if(mobileMenuChb.checked) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = 'scroll'
+    }
+})
+
 
 
 
