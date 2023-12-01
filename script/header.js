@@ -41,7 +41,7 @@ window.addEventListener('resize', ()=>{
     // header mobile menu
     if(window.innerWidth > 800 && mobileMenuChb.checked) {
         mobileMenuChb.checked = false
-        document.body.style.overflow = 'scroll'
+        document.body.style.overflow = 'auto'
     }
 })
 
@@ -63,7 +63,7 @@ mobileMenuChb.addEventListener('change' ,()=>{
     if(mobileMenuChb.checked) {
         document.body.style.overflow = 'hidden'
     } else {
-        document.body.style.overflow = 'scroll'
+        document.body.style.overflow = 'auto'
     }
 })
 
