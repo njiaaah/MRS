@@ -4,6 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1rem;
+    position: relative;
+    overflow: visible;
 }
 
 
@@ -128,12 +130,13 @@
     place-items: end;
 }
 
-.section-expert-estate > div > div:last-of-type > div:last-of-type {
+.section-expert-estate-callback {
     position: absolute;
-    display: grid;
-    top: 20rem;
-    right: 0%;
-    gap: 0.5rem;
+    display: grid !important;
+    top: 15rem;
+    right: -1.4rem;
+    gap: 0.5rem !important;
+    z-index: 2;
 }
 
 .section-expert-estate-bottom-text {
@@ -261,8 +264,9 @@
 }
 
 @media screen and (max-width: 560px) {
-    .section-expert-estate > div > div:last-of-type > div:last-of-type {
-        display: none;
+
+    .section-expert-estate-callback {
+        display: none !important;
     }
     
     .section-expert-estate-bottom-text > span{
