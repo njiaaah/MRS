@@ -45,6 +45,29 @@ window.addEventListener('resize', ()=>{
 })
 
 
+// backdrop click
+
+
+const headBackdrop = document.querySelector('#mobile-menu-backdrop') 
+
+headBackdrop.addEventListener('click',()=>{
+    if (mobileMenuChb.checked) {
+        mobileMenuChb.click()
+    }
+})
+
+// scroll disable if mobile menu open 
+
+mobileMenuChb.addEventListener('change' ,()=>{
+    if(mobileMenuChb.checked) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = 'scroll'
+    }
+})
+
+
+
 
 
 
