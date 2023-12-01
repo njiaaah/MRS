@@ -323,5 +323,6 @@
     .section-expert-estate-down-button::after {
         background-position: center;
         bottom: -4.8rem;
+        left: -2%;
     }
 }
