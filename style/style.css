@@ -22,6 +22,7 @@
     padding: 1rem 2rem;
     height: clamp(6.5rem, 5.21rem + 2.862vw, 7.5rem);
     align-items: start;
+    gap: 6px;
 }
 
 .section-expert-estate > div:first-of-type > div > div > span {
@@ -105,10 +106,6 @@
     white-space: pre-line;
 }
 
-.section-expert-estate-background div img {
-    width: clamp(2rem, 0.03rem + 4.83vw, 3.7rem);
-}
-
 .section-expert-estate-background > div:nth-of-type(2) {
     position: absolute;
     top: clamp(5.5rem, -6.091rem + 28.409vw, 15.5rem);
@@ -134,7 +131,7 @@
     position: absolute;
     display: grid !important;
     top: 15rem;
-    right: -1.4rem;
+    right: -1.7rem;
     gap: 0.5rem !important;
     z-index: 2;
 }
@@ -182,6 +179,10 @@
     letter-spacing: 0em;
     text-align: center;
     color: var(--clr-secondary-cyan);
+}
+
+.section-expert-estate-down-button a {
+    text-decoration: none;
 }
 
 .section-expert-estate-down-button {
@@ -239,6 +240,19 @@
         display: none;
     }
 
+    .section-expert-estate-callback {
+        right: clamp(-1.4rem, -0.342rem + -3.019vw, -1.7rem);
+    }
+
+    .section-expert-estate-background > img {
+        width: 95%;
+        margin-top: 3rem;
+    }
+
+    .section-expert-estate-callback {
+        top: 23rem;
+    }
+
     .section-expert-estate-background > div:nth-of-type(2) {
         display: none;
     }
@@ -252,7 +266,8 @@
     }
 
     .section-expert-estate-background > div:first-of-type {
-        left: clamp(8rem, 0.943rem + 20.126vw, 10rem);
+        left: clamp(9rem, -1.585rem + 30.189vw, 12rem);
+        top: clamp(4rem, 0.472rem + 10.063vw, 5rem);
     }
 
     .section-expert-estate-bottom-text > span {
@@ -331,8 +346,8 @@
     }
 
     .section-expert-estate-background > div:first-of-type {
-        left: clamp(6rem, 2.667rem + 16.667vw, 8.5rem);
-        top: 1rem;
+        left: clamp(5.5rem, 1.5rem + 20vw, 8.5rem);
+        top: 3rem;
     }
 
     .section-expert-estate-background div > div span:first-of-type {
@@ -380,6 +395,7 @@
     .section-benefits > div:first-of-type > h2 {
         font-size: clamp(1.5rem, -0.492rem + 9.959vw, 3rem) !important;
         padding-bottom: 1.3rem !important;
+        line-height: clamp(2.125rem, 0.542rem + 7.917vw, 3.313rem) !important;
     }
 
     .section-benefits-info h4 {
@@ -542,7 +558,7 @@
     text-align: center;
     color: var(--clr-primary-darkblue);
     white-space: pre-line;
-    margin: 0 1.5rem 5rem 1.5rem;
+    margin: 0 1.5rem 7rem 1.5rem;
 }
 
 #carousel_002_controls {
