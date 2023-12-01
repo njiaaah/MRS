@@ -116,7 +116,7 @@
         z-index: 2;
     }
 
-    #header-about-list-toggle:checked + main .drop-down ul  {
+    #header-about-list-toggle:checked ~ header .drop-down ul  {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
         
     }
@@ -125,7 +125,7 @@
         transition: transform 250ms ease;
     }
 
-    #header-about-list-toggle:checked + main .drop-down ul li img {
+    #header-about-list-toggle:checked ~ header .drop-down ul li img {
         transform: rotate(180deg);
     }
 
@@ -174,7 +174,7 @@
             transition: background-color 500ms ease;
         }        
 
-        #mobile-menu-toggle:checked ~ main header .header-menu  {
+        #mobile-menu-toggle:checked ~ header .header-menu  {
             transform: translateY(-20px);
             padding-top: 20px;
             opacity: 1;
@@ -211,25 +211,25 @@
             opacity 500ms ease
             ;
         }
-        #mobile-menu-toggle:checked ~ main header {
+        #mobile-menu-toggle:checked ~ header {
             background-color: var(--clr-primary-darkblue);
             outline: 1px solid var(--clr-greyscale-0);
         }
 
-        #mobile-menu-toggle:checked ~ main header .logo svg path {
+        #mobile-menu-toggle:checked ~ header .logo svg path {
             fill: white;
         }
 
-        #mobile-menu-toggle:checked ~ main #mobile-menu-label {
+        #mobile-menu-toggle:checked ~ header #mobile-menu-label {
             background-color: var(--clr-greyscale-0);
         }
 
-        #mobile-menu-toggle:checked ~ main #mobile-menu-label span {
+        #mobile-menu-toggle:checked ~ header #mobile-menu-label span {
             background-color: var(--clr-primary-blue);
 
         }
 
-        #mobile-menu-toggle:checked ~ main #mobile-menu-label span:first-child {
+        #mobile-menu-toggle:checked ~ header #mobile-menu-label span:first-child {
             top: 50%;
             position: relative;
             transform: translateY(-50%) rotate(45deg);
@@ -237,7 +237,7 @@
             height: 5px;
         }
 
-        #mobile-menu-toggle:checked ~ main #mobile-menu-label span:last-child {
+        #mobile-menu-toggle:checked ~ header #mobile-menu-label span:last-child {
             top: -50%;
             position: relative;
             transform: translateY(50%) rotate(-45deg);
@@ -245,7 +245,7 @@
             height: 5px;
         }
 
-        #mobile-menu-toggle:checked ~ main #mobile-menu-label span:nth-child(2) {
+        #mobile-menu-toggle:checked ~ header #mobile-menu-label span:nth-child(2) {
             opacity: 0;
         }
 
