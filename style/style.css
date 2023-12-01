@@ -486,7 +486,7 @@
 .section-benefits > div:first-of-type > h2 {
     padding-top: 10rem;
     padding-bottom: 4.5rem;
-    background-image: url(/img/benefits/background.svg);
+    background-image: url(./img/benefits/background.svg);
     text-align: center;
     font-size: 48px;
     font-weight: 500;
@@ -564,15 +564,15 @@
 }
 
 .section-benefits-container > div:first-of-type {
-    background-image: url(/img/benefits/card-back-1.svg);
+    background-image: url(./img/benefits/card-back-1.svg);
 }
 
 .section-benefits-container > div:nth-of-type(2) {
-    background-image: url(/img/benefits/card-back-2.svg);
+    background-image: url(./img/benefits/card-back-2.svg);
 }
 
 .section-benefits-container > div:nth-of-type(3) {
-    background-image: url(/img/benefits/card-back-3.svg);
+    background-image: url(./img/benefits/card-back-3.svg);
 }
 
 .section-benefits-wrap h2 {
@@ -641,7 +641,7 @@
 }
 
 .section-offers-item > div:first-of-type {
-    background-image: url(/img/offers/offer_img_1.webp);
+    background-image: url(./img/offers/offer_img_1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 8px;
