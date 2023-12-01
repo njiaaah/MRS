@@ -41,6 +41,7 @@ window.addEventListener('resize', ()=>{
     // header mobile menu
     if(window.innerWidth > 800 && mobileMenuChb.checked) {
         mobileMenuChb.checked = false
+        document.body.style.overflow = 'scroll'
     }
 })
 
