@@ -39,5 +39,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
+    // SCROLLER 02
+
+    var scroller01 = document.querySelector('#carousel_002')
+
+    if (document.querySelector('#carousel_002_controls')) {
+        var scroller01controls = document.querySelector('#carousel_002_controls').children
+        scroller01.addEventListener('scroll', () => {
+            updateScrollerControls(scroller01, scroller01controls)
+        })
+
+        for (let i = 0; i < scroller01controls.length; i++) {
+            scroller01controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller01, scroller01controls, i)
+            })
+        }
+    }
+
 
 })
