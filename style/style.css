@@ -303,6 +303,7 @@
     /* section offers */
 
     .section-offers-container {
+        gap: 0.5rem !important; 
         grid-template-columns: repeat(auto-fill, clamp(15rem, 0.887rem + 40.252vw, 19rem)) !important;
     }
 
@@ -618,6 +619,7 @@
     background-color: var(--clr-primary-lightblue);
     cursor: pointer;
     margin-bottom: 2.5rem;
+    padding: 1rem 2rem;
 }
 
 .section-offers > .section-wrap > h2 {
