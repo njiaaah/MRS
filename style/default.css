@@ -2,6 +2,7 @@
 
 body {
 
+
     /* colors */
 
     --clr-greyscale-0:#FFFFFF;
@@ -56,6 +57,11 @@ body {
     }
 }
 
+main {
+    overflow: hidden;
+    max-width: 100vw;
+}
+
 section {
     width: 100%;
 }
@@ -63,7 +69,6 @@ section {
 .section-wrap {
     margin: 0 auto;
     width: var(--content-width);
-    overflow: hidden;
 }
 
 
