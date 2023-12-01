@@ -564,7 +564,7 @@
 }
 
 .section-benefits-container > div:first-of-type {
-    background-image: url(../benefits/card-back-1.svg);
+    background-image: url(../img/benefits/card-back-1.svg);
 }
 
 .section-benefits-container > div:nth-of-type(2) {
