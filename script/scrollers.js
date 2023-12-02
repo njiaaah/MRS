@@ -55,6 +55,73 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         }
     }
+    // SCROLLER 03
+
+    var scroller03 = document.querySelector('#carousel_003')
+
+    if (document.querySelector('#carousel_003_controls')) {
+        var scroller03controls = document.querySelector('#carousel_003_controls').children
+        scroller03.addEventListener('scroll', () => {
+            updateScrollerControls(scroller03, scroller03controls)
+        })
+
+        for (let i = 0; i < scroller03controls.length; i++) {
+            scroller03controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller03, scroller03controls, i)
+            })
+        }
+        const scroll03Prev = document.querySelector('#carousel_003_side_controls_prev')
+        const scroll03Next = document.querySelector('#carousel_003_side_controls_next')
+
+        scroll03Prev.addEventListener('click', ()=>{
+            let offsetLeft = scroller03.scrollLeft - (scroller03.children[0].clientWidth + 16)
+            scroller03.scrollTo ({
+                left: offsetLeft,
+                behavior: 'smooth'
+            })
+        })
+        scroll03Next.addEventListener('click', ()=>{
+            let offsetLeft = scroller03.scrollLeft + (scroller03.children[0].clientWidth + 16)
+            scroller03.scrollTo ({
+                left: offsetLeft,
+                behavior: 'smooth'
+            })
+        })
+    }
+
+    
+    // SCROLLER 04
+
+    var scroller04 = document.querySelector('#carousel_004')
+
+    if (document.querySelector('#carousel_004_controls')) {
+        var scroller04controls = document.querySelector('#carousel_004_controls').children
+        scroller04.addEventListener('scroll', () => {
+            updateScrollerControls(scroller04, scroller04controls)
+        })
+
+        for (let i = 0; i < scroller04controls.length; i++) {
+            scroller04controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller04, scroller04controls, i)
+            })
+        }
+    }
+    // SCROLLER 05
+
+    var scroller05 = document.querySelector('#carousel_005')
+
+    if (document.querySelector('#carousel_005_controls')) {
+        var scroller05controls = document.querySelector('#carousel_005_controls').children
+        scroller05.addEventListener('scroll', () => {
+            updateScrollerControls(scroller05, scroller05controls)
+        })
+
+        for (let i = 0; i < scroller05controls.length; i++) {
+            scroller05controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller05, scroller05controls, i)
+            })
+        }
+    }
 
     // scroller - id враппера со скролл эелементами
     // controls - id статус бара 

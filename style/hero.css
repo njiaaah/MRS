@@ -1,0 +1,386 @@
+.header-wrap {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: fit-content;
+    width: 100%;
+    z-index: 100;
+}
+
+section {
+    
+}
+
+.section-wrap {
+    --_wrap-padding: 48px;
+    padding-inline: var(--_wrap-padding) ;
+
+}
+
+.section-hero {
+    background-image: url('../img/hero/hero.webp');
+    background-size: cover;
+    height: 400px;
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.section-hero h1 {
+    font-size: 48px;
+    line-height: 110%;
+    color: #FFFFFF;
+    padding-top: 150px;
+    white-space: nowrap;
+    margin-bottom: 28px;
+
+}
+
+.section-hc-about {
+    background-color: var(--clr-greyscale-0);
+    border-radius: 48px;
+    transform: translateY(-48px);
+}
+
+.section-hc-about > .section-wrap {
+    padding-top: 2.4375rem;
+}
+
+
+.grid-2-4 {
+    --_col-width: 256px;
+    display: grid;
+    grid-template-columns: repeat(4, var(--_col-width) );
+}
+
+.cold-1-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.col-2-4 {
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: grid;
+    max-width: calc((var(--_col-width)*3) + var(--_wrap-padding)*2)
+}
+
+.col-1-6 {
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+
+.section-hero .col-2-4 .tag-wrap {
+    display: flex;
+}
+
+.section-nav-menu {
+    display: flex;
+    gap: 0.75rem;
+    width: 100%;
+    margin-bottom: 5.125rem;
+}
+
+.section-nav-menu a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 0.875rem;
+    letter-spacing: 0.02em;
+    padding-bottom: 10px;
+    color: var(--clr-primary-darkblue);
+}
+
+.section-nav-menu .selected {
+    border-bottom: 1px solid var(--clr-primary-lightblue);
+}
+
+.section-hc-about-adress {
+    display: grid;
+    gap: 22px;
+}
+
+.section-hc-about-adress p{
+
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+}
+
+.section-hc-about h2 {
+font-family: Geologica;
+font-size: 24px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0em;
+text-align: left;
+margin-bottom: 2.125rem;
+
+}
+
+.section-hc-about .text p {
+    font-family: Geologica;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-primary-darkblue);    
+}
+
+.official-site-wrap {
+    display: flex;
+    gap: .5rem;
+    font-family: Geologica;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-primary-lightblue);
+    margin-top: 2.6875rem;
+}
+
+.section-hc-about-carousel {
+    position: relative;
+    margin-top: 2.6875rem;
+}
+
+
+.section-hc-about-carousel .carousel-wrap {
+    width: calc( var(--_col-width)*3 + var(--_wrap-padding) * 3  );
+    position: relative;
+    gap: 1rem;
+}
+
+.section-hc-about-carousel {
+    min-width: calc( var(--_col-width)*3 + var(--_wrap-padding) * 3  );
+}
+
+.section-hc-about-tag-wrap {
+    margin-top: 70px;
+}
+
+
+
+#carousel_003_side_controls_prev,
+#carousel_003_side_controls_next {
+    width: 32px;
+    aspect-ratio: 1;
+    background-color: var(--clr-primary-darkblue);
+    display: grid;
+    place-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: scale 250ms;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+#carousel_003_side_controls_prev {
+    left: 1rem;
+}
+
+#carousel_003_side_controls_prev svg {
+    transform: translateX(-1px);
+}
+
+#carousel_003_side_controls_next {
+    right: 1rem;
+    
+}
+
+
+
+
+.text h3 {
+    font-family: Geologica;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-greyscale-8);
+    margin-bottom: 4px;
+
+}
+
+.text h3:first-child {
+    margin-top: 2.375rem ;
+}
+
+.text p+h3 {
+    margin-top: 1.5rem;
+}
+
+.section-hc-about-mini-card-wrap {
+    display: grid;
+}
+
+.section-hc-about-mini-card-wrap .carousel-wrap {
+    margin-top: 3rem;
+    grid-template-columns: repeat(4, var(--_col-width) );
+    display: grid;
+}
+
+#carousel_004_controls {
+    display: none;
+}
+
+#carousel_004 .card-item{
+    background-color: var(--clr-greyscale-2);
+    padding: 1.375rem 2rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 0.75rem;
+    width: 100%;
+    min-width: 250px;
+}
+
+#carousel_004 .card-item p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    text-wrap: balance;
+}
+
+.double-card-wrap {
+    display: grid;
+    gap: 2rem;
+}
+
+
+.section-typical-layouts {
+    margin-top: 5.125rem;
+}
+
+.section-typical-layouts h2 {
+    margin-bottom: 1.5rem;
+}
+
+.section-typical-layouts .tag {
+    border-radius: 1.125rem;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.9375rem;
+    color: var(--clr-greyscale-6);
+    background-color: var(--clr-greyscale-2);
+    padding: 0.625rem 1.25rem;
+
+}
+
+.mortgage-toggle {
+    transition: transform 200ms ease;
+    cursor: pointer;
+}
+
+.mortgage-toggle:active {
+    scale: .9;
+}
+
+.section-mortgage { 
+    margin-top: 4.625rem;
+}
+
+.mortgage-table-container {
+    margin-top: 1rem;
+}
+
+.section-mortgage .section-wrap {
+    background-color: #F2F4F8;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 4.5rem 2.5625rem;
+}
+
+.mortgage-table-item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--clr-greyscale-4);
+}
+
+.mortgage-table-item-head h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.75rem;
+    color: var(--clr-primary-darkblue);
+    margin-block: 2rem 1rem;
+}
+
+.mortgage-table-item-addon {
+    height: 302px;
+    overflow-y: scroll;
+    width: min(900px, 95%);
+    margin: 2rem auto;
+    padding-right: 2rem;
+
+}
+
+.mortgage-table-item-addon::-webkit-scrollbar {
+    width: 4px;
+    background-color:var(--clr-greyscale-4) ;
+}
+
+.mortgage-table-item-addon::-webkit-scrollbar-track{
+    
+}
+
+.mortgage-table-item-addon::-webkit-scrollbar-thumb {
+    background-color:var(--clr-primary-lightblue) ;
+}
+.mortgage-addon-head {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-greyscale-6);
+}
+
+.mortgage-addon-item {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-greyscale-8);
+    padding-block: 1.4375rem 1rem;
+}
+
+.mortgage-addon-item,
+.mortgage-addon-head {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--clr-greyscale-4);
+}
+
+
+
+.mortgage-addon-item > *, .mortgage-addon-head>* {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.mortgage-addon-head>* {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.mortgage-addon-item > span:nth-child(2)::after, 
+.mortgage-addon-item > span:nth-child(3)::after {
+    content: ' %';
+}
+
+.mortgage-addon-item > span:nth-child(3)::before {
+    content: 'от ';
+}
