@@ -7,48 +7,33 @@ const headerChb2 = document.querySelector('#header-about-list-toggle02')
 const dropDownUl = document.querySelector('#dropDownUl')
 const dropDownUl2 = document.querySelector('#dropDownUl02')
 const listToUpdate = dropDownUl.querySelectorAll('[hidden]')
+
 if(dropDownUl2) {
     const listToUpdate2 = dropDownUl2.querySelectorAll('[hidden]')
+
+    headerChb2.addEventListener('change',()=>{
+        listToUpdate2.forEach(item => {
+            if(headerChb2.checked) {
+                item.removeAttribute('hidden')
+            } else {
+                item.setAttribute('hidden', '')
+            }
+        });
+    })
 }
 
 
 headerChb.addEventListener('change',()=>{
     listToUpdate.forEach(item => {
         if(headerChb.checked) {
-            if(document.startViewTransition()) {
-                // document.startViewTransition(()=>{
-                    item.removeAttribute('hidden')
-                // })
-            } else item.removeAttribute('hidden')
+            item.removeAttribute('hidden')
         } else {
-            if(document.startViewTransition()) {
-                // document.startViewTransition(()=>{
-                    item.setAttribute('hidden', '')
-                // })
-            } else item.setAttribute('hidden', '')
+            item.setAttribute('hidden', '')
         }
     });
 })
 
-if(headerChb2) {
-    headerChb2.addEventListener('change',()=>{
-        listToUpdate2.forEach(item => {
-            if(headerChb2.checked) {
-                if(document.startViewTransition()) {
-                    // document.startViewTransition(()=>{
-                        item.removeAttribute('hidden')
-                    // })
-                } else item.removeAttribute('hidden')
-            } else {
-                if(document.startViewTransition()) {
-                    // document.startViewTransition(()=>{
-                        item.setAttribute('hidden', '')
-                    // })
-                } else item.setAttribute('hidden', '')
-            }
-        });
-    })
-}
+
 
 
 

@@ -12,7 +12,7 @@
 
 
 header .drop-down:nth-of-type(2) {
-    width: 220px;
+    width: 20px;
     transform: translateY(-50%) translateX(15px) translateX(65%);
 }
 
@@ -604,8 +604,9 @@ margin-bottom: 2.125rem;
 
 @media screen and (max-width: 560px) {
 
-    .right-side-controls {
-        display: none;
+    .right-side-controls span {
+        width: 48px;
+        aspect-ratio: 1;
     }
 
     .hide560 {

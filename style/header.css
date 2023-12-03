@@ -21,7 +21,7 @@
         /* left: 15.625rem; */
         left: clamp(15.625rem, 1.8889rem + 23.8889vw, 21rem);
         top: 50%;
-        transform: translateY(-50%) translateX(15px);
+        transform: translateY(-50%) translateX(-15px);
         height: 14px;
         z-index: 100;
     }
@@ -29,8 +29,29 @@
     header .drop-down ul {
         background-color: var(--clr-greyscale-2);
         border-radius: 0px;
-        
     }
+
+    header .drop-down:nth-of-type(2) {
+        width: 220px;
+        transform: translateY(-50%) translateX(-15px) translateX(65%);
+    }
+    
+    header .info-wrap p {
+        position: relative;
+        z-index: 100;
+    }
+    
+    
+    @media screen and (max-width: 1185px) {
+        header .drop-down:nth-of-type(2) {
+            display: none;
+        }
+    
+    }
+    
+
+
+/*  */
     
     header .drop-down ul li {
         margin-inline: 20px;
@@ -43,6 +64,7 @@
         font-size: 0.75rem;
         font-weight: 500;
         line-height: 0.875rem;
+        white-space: nowrap;
     }
 
     header .drop-down ul li:first-child {

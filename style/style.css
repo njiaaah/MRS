@@ -132,7 +132,7 @@
     display: grid;
     top: 15rem;
     right: 0;
-    gap: 0.5rem !important;
+    gap: 0.;
     z-index: 5;
 }
 
@@ -241,7 +241,8 @@
     }
 
     .section-expert-estate-callback {
-        right: clamp(-1.4rem, -0.342rem + -3.019vw, -1.7rem);
+        right: 0;
+
     }
 
     .section-expert-estate-background > img {
@@ -249,9 +250,6 @@
         margin-top: 3rem;
     }
 
-    .section-expert-estate-callback {
-        top: 23rem;
-    }
 
     .section-expert-estate-background > div:nth-of-type(2) {
         display: none;
@@ -321,8 +319,8 @@
 
     /* section expert estate */
 
-    .section-expert-estate-callback {
-        display: none !important;
+    .section-expert-estate-callback img{
+       width: 48px;  
     }
 
     .section-expert-estate > div:first-of-type > div:last-of-type {
