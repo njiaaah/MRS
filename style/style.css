@@ -128,12 +128,12 @@
 }
 
 .section-expert-estate-callback {
-    position: absolute;
-    display: grid !important;
+    position: fixed;
+    display: grid;
     top: 15rem;
-    right: -1.7rem;
+    right: 0;
     gap: 0.5rem !important;
-    z-index: 2;
+    z-index: 5;
 }
 
 .section-expert-estate-bottom-text {
