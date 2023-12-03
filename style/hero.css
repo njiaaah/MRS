@@ -7,9 +7,6 @@
     z-index: 100;
 }
 
-section {
-    
-}
 
 .section-wrap {
     --_wrap-padding: 48px;
@@ -50,11 +47,13 @@ section {
 
 .grid-2-4 {
     --_col-width: 256px;
+    --_col-width: 167px;
+    --_col-width: clamp(10.0625rem, -4rem + 25vw, 16rem);
     display: grid;
     grid-template-columns: repeat(4, var(--_col-width) );
 }
 
-.cold-1-2 {
+.col-1-2 {
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -99,10 +98,10 @@ section {
 .section-hc-about-adress {
     display: grid;
     gap: 22px;
+    height: fit-content;
 }
 
 .section-hc-about-adress p{
-
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5625rem;
@@ -133,7 +132,7 @@ margin-bottom: 2.125rem;
     display: flex;
     gap: .5rem;
     font-family: Geologica;
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 0.4079rem + 1.0526vw, 1.25rem);
     font-weight: 400;
     line-height: 1.5625rem;
     letter-spacing: 0em;
@@ -160,6 +159,8 @@ margin-bottom: 2.125rem;
 
 .section-hc-about-tag-wrap {
     margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -176,7 +177,7 @@ margin-bottom: 2.125rem;
     transition: scale 250ms;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(calc(-50% - 9px));
     
 }
 
@@ -209,7 +210,7 @@ margin-bottom: 2.125rem;
 }
 
 .text h3:first-child {
-    margin-top: 2.375rem ;
+    margin-top: 2.625rem ;
 }
 
 .text p+h3 {
@@ -236,16 +237,14 @@ margin-bottom: 2.125rem;
     border-radius: 1rem;
     display: grid;
     gap: 0.75rem;
-    width: 100%;
-    min-width: 250px;
+    min-width: 200px;
+    
 }
 
 #carousel_004 .card-item p {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
-    letter-spacing: 0em;
-    text-align: left;
     text-wrap: balance;
 }
 
@@ -254,9 +253,24 @@ margin-bottom: 2.125rem;
     gap: 2rem;
 }
 
+.section-hc-about-carousel-dbl {
+    margin-top: 3rem;
+}
+
+.section-hc-about-carousel-dbl .carousel-wrap {
+    gap: 2rem;
+    width: var(--_content-width);
+}
+
 
 .section-typical-layouts {
     margin-top: 5.125rem;
+}
+
+
+.section-typical-layouts .carousel-wrap div img {
+    width: var(--content-width);
+    /* width: calc( var(--content-width) - var(--_wrap-padding)*2); */
 }
 
 .section-typical-layouts h2 {
@@ -319,17 +333,15 @@ margin-bottom: 2.125rem;
     width: min(900px, 95%);
     margin: 2rem auto;
     padding-right: 2rem;
-
+    position: relative;
+    border-right: 1px solid var(--clr-greyscale-4);
 }
 
 .mortgage-table-item-addon::-webkit-scrollbar {
     width: 4px;
-    background-color:var(--clr-greyscale-4) ;
+    background-color: transparent;
 }
 
-.mortgage-table-item-addon::-webkit-scrollbar-track{
-    
-}
 
 .mortgage-table-item-addon::-webkit-scrollbar-thumb {
     background-color:var(--clr-primary-lightblue) ;
@@ -383,4 +395,141 @@ margin-bottom: 2.125rem;
 
 .mortgage-addon-item > span:nth-child(3)::before {
     content: 'от ';
+}
+
+.section-hc-adress-official-combo {
+    display: none;
+}
+
+.section-typical-layouts .carousel-container {
+    margin-top: 3.25rem;
+    position: relative;
+    
+}
+
+.section-typical-layouts .carousel-container .carousel-wrap {
+    padding-right: 1rem;
+}
+
+.section-typical-layouts .section-wrap {
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+.section-hc-about .section-wrap ,
+.section-typical-layouts .section-wrap {
+    margin: 0 0;
+    width: 100vw;
+    padding-inline: 36px;
+}
+
+.section-typical-layouts .carousel-wrap div img {
+    width: calc(100vw - 36px);
+}
+
+.section-hc-adress-official-combo {
+    display: flex;
+    gap: 2rem;
+    order: 1;
+}
+
+.section-wrap > .section-hc-about-adress,
+.section-wrap > .official-site-wrap {
+    display: none;
+}
+
+.grid-2-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-hc-about-adress {
+    display: flex;
+}
+
+.official-site-wrap {
+    margin-top: 0;
+}
+
+.section-hc-about-carousel {
+    order: 2;
+    min-width: calc(100% + 36px/2);
+    margin-top: 2.5rem;
+}
+
+.section-hc-about-adress + .text {
+    order: 3;
+}
+
+.col-2-4 {
+    max-width: none;
+}
+
+
+.section-hc-about-tag-wrap {order: 4;}
+
+.section-hc-about-tag-wrap + .text {order: 5;}
+
+.section-hc-about-carousel-dbl {order: 6;}
+
+.section-hc-about-carousel .carousel-wrap  {
+    width: 100%;
+}
+
+#carousel_004_controls {
+    display: flex;
+}
+
+.section-typical-layouts h2 {
+    font-size: clamp(1.75rem, -2.625rem + 12.5vw, 3rem);
+}
+
+.section-hc-about h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-hc-about-tag-wrap .btn {
+    font-size: 0.75rem;
+    padding: 0.625rem 1.5rem;
+}
+
+.mortgage-table-item-addon {
+    padding-right: clamp(1rem, -7.2353rem + 23.5294vw, 6rem);
+}
+/* .section-mortgage .section-wrap {
+    padding-inline: 20px ;
+    width: 95%;
+    margin-inline: auto;
+} */
+
+.mortgage-addon-item > *:nth-child(2), .mortgage-addon-head>*:nth-child(2) {
+    min-width: clamp(1.875rem, -15.625rem + 50vw, 12.5rem);
+}
+
+
+}
+
+
+@media screen and (max-width: 720px) {
+
+    body {
+        --content-width: clamp(var(--content-width-320), 1.536rem + 87.32vw, var(--content-width-720));
+    }
+
 }

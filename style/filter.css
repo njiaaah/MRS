@@ -42,11 +42,6 @@ body {
     --fs-card-price: 1rem;
 
     /* width */
-
-    --content-width-1280: 76rem; /* 1216px */
-    --content-width-720: 40.8331rem; /* 653.33px ? */
-    --content-width-320: 19rem; /* 304px ? */
-    --content-width: clamp(var(--content-width-720), -4.3886rem + 100.4857vw, var(--content-width-1280));
 }
 
 button, .btn {
@@ -67,7 +62,7 @@ button, .btn {
     cursor: pointer;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=checkbox], input[type=radio],.section-filter-view-controls-720 {
     display: none;
 }
 
@@ -447,6 +442,7 @@ color: var(--clr-greyscale-8);
 background-color: var(--clr-greyscale-2);
 padding: 10px 20px;
 width: fit-content;
+white-space: nowrap;
 
 
 }
@@ -517,4 +513,161 @@ width: fit-content;
 
 .card-tags {
     margin-top: 2rem;
+}
+
+@media screen and (max-width: 1030px) {
+
+    .section-filter .section-wrap{
+        width: 95%;
+        background-color: var(--clr-greyscale-2);
+        padding: 2.8125rem 1.25rem 3.75rem 1.25rem;
+        border-radius: 24px;
+        margin-bottom: 2rem;
+        margin: auto;
+    }
+    .section-filter-controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-filter-controls > *:nth-child(2) {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+
+    .section-filter-controls > *:nth-child(3) {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+
+    .section-filter-controls .btn {
+        display: none
+    };
+    .view-changer-wrap {
+        display: none;
+    }
+    
+    .section-filter-view-controls-container {
+        display: none;
+    }
+
+    .filter-result-card-view {
+        margin-top: 1.5rem;
+        gap: 1.375rem;
+    }
+
+    .hideat720 {
+        display: none;
+    }
+
+    .section-filter-controls {
+        margin-bottom: 40px;
+    }
+
+    .filter-result-card-view {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-filter-room-select {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    
+    .section-filter-view-controls-720 {
+        display: block; 
+        height: 58px;
+        /* border-radius: 2rem; */
+        width: fit-content;
+        
+        margin-top: calc(40px + 2rem);
+    }
+    .view-controls-720-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.6875rem;
+        white-space: nowrap;
+        padding: 16px 18px;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+
+    .view-controls-720-head span {
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        color: var(--clr-primary-darkblue);
+    }
+  
+
+    .view-controls-720-head span + label{
+        transform: translateX(2px);
+    }
+
+    .view-controls-720-body {
+        display: none;
+
+    }
+    #mobile-filter-options-toggle:checked + div {
+        background-color: var(--clr-greyscale-2);
+        box-shadow: 5px 6px 9px 0px #D2D2D226;
+
+    }
+
+    #mobile-filter-options-toggle:checked + div .view-controls-720-body {
+        display: block;
+        z-index: 10;
+        position: relative;
+        background-color: var(--clr-greyscale-2);
+        padding: 16px 18px;
+        box-shadow: 5px 6px 9px 0px #D2D2D226;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    .view-controls-720-body ul li {
+        border-top: 1px solid var(--clr-greyscale-0);
+        padding: 10px 0 10px 0;
+
+    }
+
+    .view-controls-720-body ul li label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.125rem;
+        color: var(--clr-greyscale-6);
+    }
+
+    .view-controls-720-body ul li span {
+        display: block;
+        width: 20px;
+        aspect-ratio: 1;
+        border: 1.5px solid var(--clr-greyscale-4);
+        border-radius: 100%;
+    }
+
+    .view-controls-720-body ul li input:checked + label span {
+        border: 1.5px solid var(--clr-primary-darkblue);
+        position: relative;
+    }
+
+    .view-controls-720-body ul li input:checked + label span::after {
+        display: block;
+        content: '';
+        width: 10px;
+        aspect-ratio: 1;
+        background-color: var(--clr-primary-darkblue);
+        position: absolute;
+        inset: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .filter-result-card-view {
+        grid-template-columns: 1fr;
+    }
 }

@@ -119,19 +119,20 @@ h5 {
     -ms-overflow-style: none;
 }
 
-.carousel-container::-webkit-scrollbar {
+.carousel-container::-webkit-scrollbar ,
+.carousel-wrap::-webkit-scrollbar {
     display: none;
 }
 
 
 .carousel-wrap {
-    overflow: hidden;
+    overflow: scroll;
     width: fit-content;
     display: flex;
     padding-bottom: 1.75rem;
     width: var(--content-width);
-    gap: 2rem;
-    margin-top: 4rem;
+    /* very important */
+    /* gap: 0.001px */
 }
 
 .carousel-controls {

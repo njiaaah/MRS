@@ -22,10 +22,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
         allScrolls[i].addEventListener('mouseleave', () => {
             document.body.style.cursor = 'default'
             scrollAndSnap(allScrolls[i])
+            // console.log('cock')
             isMouseDown = false
         })
 
         allScrolls[i].addEventListener('mouseup', () => {
+            document.body.style.cursor = 'grab'
+            scrollAndSnap(allScrolls[i])
+            isMouseDown = false
+
+        })
+
+        window.addEventListener('mouseup', () => {
             document.body.style.cursor = 'grab'
             scrollAndSnap(allScrolls[i])
             isMouseDown = false
@@ -37,6 +45,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function scrollAndSnap(element) {
 
         let scrollGap = window.getComputedStyle(element).rowGap
+
+        if(scrollGap === 'normal') {
+            scrollGap = 0
+        }
+
         element.scrollTo({
             left: Math.round(element.scrollLeft / element.firstElementChild.offsetWidth) * element.firstElementChild.offsetWidth + Math.round(element.scrollLeft / element.firstElementChild.offsetWidth) * parseInt(scrollGap) - 1,
             behavior: 'smooth'
