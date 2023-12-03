@@ -10,15 +10,15 @@ headerChb.addEventListener('change',()=>{
     listToUpdate.forEach(item => {
         if(headerChb.checked) {
             if(document.startViewTransition()) {
-                document.startViewTransition(()=>{
+                // document.startViewTransition(()=>{
                     item.removeAttribute('hidden')
-                })
+                // })
             } else item.removeAttribute('hidden')
         } else {
             if(document.startViewTransition()) {
-                document.startViewTransition(()=>{
+                // document.startViewTransition(()=>{
                     item.setAttribute('hidden', '')
-                })
+                // })
             } else item.setAttribute('hidden', '')
         }
     });
