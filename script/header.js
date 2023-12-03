@@ -9,21 +9,37 @@ const dropDownUl2 = document.querySelector('#dropDownUl02')
 const listToUpdate = dropDownUl.querySelectorAll('[hidden]')
 
 if(dropDownUl2) {
-    const listToUpdate2 = dropDownUl2.querySelectorAll('[hidden]')
+    var listToUpdate2 = dropDownUl2.querySelectorAll('[hidden]')
+}
+
+if(dropDownUl2) {
+
 
     headerChb2.addEventListener('change',()=>{
+
+        if(headerChb.checked) {
+            headerChb.click()
+        }
+
         listToUpdate2.forEach(item => {
             if(headerChb2.checked) {
                 item.removeAttribute('hidden')
             } else {
                 item.setAttribute('hidden', '')
             }
+
+
         });
     })
 }
 
 
 headerChb.addEventListener('change',()=>{
+
+    if(headerChb2.checked) {
+        headerChb2.click()
+    }
+
     listToUpdate.forEach(item => {
         if(headerChb.checked) {
             item.removeAttribute('hidden')
