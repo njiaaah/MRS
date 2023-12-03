@@ -21,7 +21,7 @@
         /* left: 15.625rem; */
         left: clamp(15.625rem, 1.8889rem + 23.8889vw, 21rem);
         top: 50%;
-        transform: translateY(-50%);
+        transform: translateY(-50%) translateX(15px);
         height: 14px;
         z-index: 100;
     }
@@ -45,9 +45,6 @@
         line-height: 0.875rem;
     }
 
-
-
-
     header .drop-down ul li:first-child {
         display: flex;
         gap: 6px;
@@ -62,8 +59,6 @@
     header .drop-down ul li:last-child {
         padding-bottom: 20px;
     }
-
-
 
     header .drop-down ul li label {
         cursor: pointer;

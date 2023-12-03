@@ -533,3 +533,36 @@ margin-bottom: 2.125rem;
     }
 
 }
+
+
+@media screen and (max-width: 560px) {
+
+    .section-hero {
+        height: 480px;
+        background-image: url('../img/hero/hero.webp');
+        background-position: center;
+    }
+
+    .section-hero .section-wrap {
+        margin-inline:0 ;
+        width: 100%;
+        outline: 2px solid red;
+        padding-inline: 24px;
+        
+    }
+
+    .section-hero h1 {
+        margin-bottom: 1rem;
+        max-width: 5ch;
+    }
+
+    .section-hero .col-2-4 .tag-wrap {
+        flex-direction: column;
+        gap: .5rem ;
+        
+    }
+
+    .section-hero .col-2-4 .tag-wrap>*{
+        width: fit-content;
+    }
+}

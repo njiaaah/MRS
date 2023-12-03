@@ -49,7 +49,16 @@ body {
     --content-width-720: 40.8331rem; /* 653.33px ? */
     --content-width-320: 19rem; /* 304px ? */
     --content-width: clamp(var(--content-width-720), -4.3886rem + 100.4857vw, var(--content-width-1280));
+
+
 }
+
+:root, html, body, main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media screen and (max-width: 720px) {
     body {
