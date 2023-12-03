@@ -25,6 +25,7 @@
                 <!-- header checkboxes -->
                 <input type="checkbox" id="mobile-menu-toggle" style="display: none;">
                 <input type="checkbox" id="header-about-list-toggle" style="display: none;">
+                <input type="checkbox" id="header-about-list-toggle02" style="display: none;">
 
                 <header>
 
@@ -51,6 +52,16 @@
                                 <li hidden><a href="#">Контакты</a></li>
                             </ul>
         
+                    </div>
+
+                    <div class="drop-down">
+                        <ul id="dropDownUl02">
+                            <li><a href="#">Жилая недвижимость</a><label for="header-about-list-toggle02"><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
+                            <li hidden><a href="#">Коммерческая недвижимость</a></li>
+                            <li hidden><a href="#">Машиноместа и кладовые</a></li>
+                            <li hidden><a href="#">Автомойки</a> </li>
+                        </ul>
+    
                     </div>
         
                     <div class="info-wrap">
@@ -121,6 +132,30 @@
 
         </div>
 
+        <div class="right-side-controls">
+
+            <span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z" fill="white"/>
+                    <path d="M21.9696 18.33C21.9696 18.61 21.9196 18.9 21.8196 19.18C21.7896 19.26 21.7596 19.34 21.7196 19.42C21.5496 19.78 21.3296 20.12 21.0396 20.44C20.5496 20.98 20.0096 21.37 19.3996 21.62C19.3896 21.62 19.3796 21.63 19.3696 21.63C18.7796 21.87 18.1396 22 17.4496 22C16.4296 22 15.3396 21.76 14.1896 21.27C13.0396 20.78 11.8896 20.12 10.7496 19.29C10.3596 19 9.96961 18.71 9.59961 18.4L12.8696 15.13C13.1496 15.34 13.3996 15.5 13.6096 15.61C13.6596 15.63 13.7196 15.66 13.7896 15.69C13.8696 15.72 13.9496 15.73 14.0396 15.73C14.2096 15.73 14.3396 15.67 14.4496 15.56L15.2096 14.81C15.4596 14.56 15.6996 14.37 15.9296 14.25C16.1596 14.11 16.3896 14.04 16.6396 14.04C16.8296 14.04 17.0296 14.08 17.2496 14.17C17.4696 14.26 17.6996 14.39 17.9496 14.56L21.2596 16.91C21.5196 17.09 21.6996 17.3 21.8096 17.55C21.9096 17.8 21.9696 18.05 21.9696 18.33Z" fill="white"/>
+                    </svg>
+                    
+            </span>
+
+            <span>
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.126953 24.6549C0.126953 24.0336 0.396363 23.5299 0.728697 23.5299H16.7752C17.1075 23.5299 17.377 24.0336 17.377 24.6549C17.377 25.2763 17.1075 25.7799 16.7752 25.7799H0.728697C0.396363 25.7799 0.126953 25.2763 0.126953 24.6549Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.37695 22.4049C2.37695 21.7836 2.57608 21.2799 2.82172 21.2799H14.6822C14.9278 21.2799 15.127 21.7836 15.127 22.4049C15.127 23.0263 14.9278 23.5299 14.6822 23.5299H2.82172C2.57608 23.5299 2.37695 23.0263 2.37695 22.4049Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8892 10.7546C14.3286 10.3153 14.9285 10.2029 15.2292 10.5036L24.3036 19.5779C24.6043 19.8786 24.4919 20.4785 24.0525 20.9179C23.6132 21.3572 23.0133 21.4696 22.7126 21.1689L13.6382 12.0946C13.3375 11.7939 13.4499 11.1939 13.8892 10.7546Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.42928 10.8414C4.86862 10.402 5.3965 10.2176 5.60832 10.4294L12.0007 16.8218C12.2125 17.0336 12.0281 17.5615 11.5887 18.0008C11.1494 18.4402 10.6215 18.6246 10.4097 18.4128L4.01733 12.0204C3.80551 11.8086 3.98994 11.2807 4.42928 10.8414Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.20226 6.06841C10.8132 4.4575 12.2908 3.32332 12.5026 3.53514L18.895 9.92751C19.1068 10.1393 17.9726 11.617 16.3617 13.2279C14.7508 14.8388 13.2732 15.973 13.0614 15.7611L6.66898 9.36877C6.45716 9.15695 7.59134 7.67933 9.20226 6.06841Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9752 1.29544C14.4146 0.856104 14.9424 0.671667 15.1543 0.883491L21.5466 7.27586C21.7585 7.48769 21.574 8.01556 21.1347 8.4549C20.6953 8.89424 20.1675 9.07868 19.9556 8.86685L13.5633 2.47448C13.3514 2.26266 13.5359 1.73478 13.9752 1.29544Z" fill="white"/>
+                    </svg>
+                    
+            </span>
+
+        </div>
+
         <section class="section-hero">
 
             <div class="section-wrap grid-2-4">
@@ -144,9 +179,9 @@
 
         <section class="section-hc-about">
 
-            <div class="section-wrap grid-2-4">
+            <div class="section-wrap grid-2-4 carousel-container">
 
-                <nav class="section-nav-menu col-2-4">
+                <nav class="section-nav-menu col-2-4 carousel-wrap dragscroll">
                     <ul><a class="selected" href="">Описание</a></ul>
                     <ul><a href="">Инфраструктура</a></ul>
                     <ul><a href="">Новости</a></ul>
@@ -165,7 +200,7 @@
                             
                         <p>
                             г. Москва, ЗАО <br>
-                            Мичуринский <br> проспект,<br> вл. 45  
+                            Мичуринский <br class="hide560"> <span class="hide560">проспект</span><span class="only560">пр-т</span>,<br> вл. 45  
                         </p>
     
                     </div>
@@ -174,7 +209,7 @@
                         <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5676 5.08911C15.2613 5.23762 14.99 5.57484 14.99 6.098V7.80727C14.99 8.35956 14.5423 8.80727 13.99 8.80727H10.91C6.7976 8.80727 3.18318 12.4298 3.00674 17.1329C4.9848 15.2065 7.56425 14.1002 10.36 14.1002H13.99C14.5423 14.1002 14.99 14.5479 14.99 15.1002V17.7211C14.99 18.2442 15.2613 18.5814 15.5676 18.73C15.8737 18.8784 16.2175 18.849 16.4942 18.5886C16.4941 18.5887 16.4942 18.5885 16.4942 18.5886L22.6345 12.7956C23.1522 12.2437 23.0799 11.4281 22.6684 11.0551L22.6538 11.0416L16.4944 5.23067C16.4943 5.23053 16.4946 5.23081 16.4944 5.23067C16.2178 4.97043 15.8737 4.94067 15.5676 5.08911ZM14.6949 3.28951C15.6812 2.8113 16.9323 2.89579 17.8656 3.77469L24.0197 9.58064C25.3562 10.8009 25.2841 12.9308 24.0595 14.1994C24.0486 14.2106 24.0376 14.2215 24.0262 14.2322L17.8662 20.0438C16.933 20.9227 15.6812 21.0078 14.6949 20.5295C13.7087 20.0513 12.99 19.0211 12.99 17.7211V16.1002H10.36C7.32778 16.1002 4.55849 17.716 2.85454 20.5195C2.62164 20.9027 2.16212 21.084 1.73031 20.963C1.29851 20.8421 1 20.4485 1 20.0001V17.4932C1 11.6588 5.44679 6.80727 10.91 6.80727H12.99V6.098C12.99 4.79794 13.7087 3.76773 14.6949 3.28951Z" fill="#0373FF"/>
                         </svg>
-                        Официальный <br>сайт
+                        Официальный <br class="hide560">сайт
                             
                     </a>
 
@@ -457,7 +492,7 @@
                     </div> 
 
                     <div class="slider-container">
-                        <span class="double-slider-type">Общая площадь, м2</span>
+                        <span class="double-slider-type">Общая площадь, м²</span>
                         <div class="slider-wrap">  
                             <div class="slider-val-wrap">
                                 <span id="sliderFilter02-lower" class="slider-val"></span>
@@ -895,6 +930,10 @@
                     
                 </div>
 
+                <div class="only560 show-more-last">
+                    <a href="#" class="btn btn-light-blue">Показать <span class="someId">100</span> квартир</a>
+                </div>
+
 
 
 
@@ -973,7 +1012,7 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -1105,7 +1144,138 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+
+
+
+                            </div>
+
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+                            <div class="mortgage-addon-item">
+
+                                <span>Сбербанк</span>
+                                <span>5</span>
+                                <span>15</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="mortgage-table-item" >
+
+                        <div class="mortgage-table-item-head">
+
+                            <h4>Поддержка с воздуха</h4>
+
+                            <span class="mortgage-toggle">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 11.0001L11.2929 13.293C11.6834 13.6835 12.3166 13.6835 12.7071 13.293L15 11.0001M2 17.0001L2 7.00012C2 4.2387 4.23858 2.00012 7 2.00012L17 2.00012C19.7614 2.00012 22 4.2387 22 7.00012L22 17.0001C22 19.7615 19.7614 22.0001 17 22.0001L7 22.0001C4.23858 22.0001 2 19.7615 2 17.0001Z" stroke="#AEBCC6" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    
+                            </span>
+
+                        </div>
+                        <div class="mortgage-table-item-addon" style="display: none;">
+
+                            <div class="mortgage-addon-head">
+
+                                <span>
+                                    Банк
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    Ставка
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+
+                                <span>
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -1236,7 +1406,7 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -1367,7 +1537,7 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -1498,7 +1668,7 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
@@ -1629,138 +1799,7 @@
                                 </span>
 
                                 <span>
-                                    Первый взнос
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-
-
-
-                            </div>
-
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-                            <div class="mortgage-addon-item">
-
-                                <span>Сбербанк</span>
-                                <span>5</span>
-                                <span>15</span>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="mortgage-table-item" >
-
-                        <div class="mortgage-table-item-head">
-
-                            <h4>Господдержка 2020</h4>
-
-                            <span class="mortgage-toggle">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9 11.0001L11.2929 13.293C11.6834 13.6835 12.3166 13.6835 12.7071 13.293L15 11.0001M2 17.0001L2 7.00012C2 4.2387 4.23858 2.00012 7 2.00012L17 2.00012C19.7614 2.00012 22 4.2387 22 7.00012L22 17.0001C22 19.7615 19.7614 22.0001 17 22.0001L7 22.0001C4.23858 22.0001 2 19.7615 2 17.0001Z" stroke="#AEBCC6" stroke-width="1.5" stroke-linecap="round"/>
-                                    </svg>
-                                    
-                            </span>
-
-                        </div>
-                        <div class="mortgage-table-item-addon" style="display: none;">
-
-                            <div class="mortgage-addon-head">
-
-                                <span>
-                                    Банк
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-
-                                <span>
-                                    Ставка
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </span>
-
-                                <span>
-                                    Первый взнос
+                                    <span class="hide560">Первый </span>взнос
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.9201 6.94995L13.4001 13.47C12.6301 14.24 11.3701 14.24 10.6001 13.47L4.08008 6.94995" stroke="#7E8385" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>

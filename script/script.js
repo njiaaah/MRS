@@ -34,10 +34,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
 
         window.addEventListener('mouseup', () => {
-            document.body.style.cursor = 'grab'
             scrollAndSnap(allScrolls[i])
             isMouseDown = false
-
         })
 
     }

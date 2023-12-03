@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         for (let i = 0; i < controls.length; i++) {
             controls[i].classList.remove('active-point')
         }
-        controls[currentScroll].classList.add('active-point')
+        if(controls) {
+            controls[currentScroll].classList.add('active-point')
+        }
+        
     }
 
     // btnIndex - порядковый номер кнопки по которой было кликнуто

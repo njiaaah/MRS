@@ -1,3 +1,6 @@
+/* special header needs */
+
+
 .header-wrap {
     position: absolute;
     left: 50%;
@@ -8,9 +11,57 @@
 }
 
 
-.section-wrap {
+header .drop-down:nth-of-type(2) {
+    width: 220px;
+    transform: translateY(-50%) translateX(15px) translateX(65%);
+}
+
+header .info-wrap p {
+    position: relative;
+    z-index: 100;
+}
+
+
+@media screen and (max-width: 1185px) {
+    header .drop-down:nth-of-type(2) {
+        display: none;
+    }
+
+}
+
+
+/*  */
+
+
+
+
+section+section .section-wrap {
     --_wrap-padding: 48px;
     padding-inline: var(--_wrap-padding) ;
+
+}
+
+.only560 {
+    display: none;
+}
+
+.right-side-controls {
+    position: fixed;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: 400px;
+    z-index: 2;
+}
+
+.right-side-controls span {
+    background-color: var(--clr-secondary-red);
+    width: 64px;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: .5rem;
 
 }
 
@@ -42,6 +93,7 @@
 
 .section-hc-about > .section-wrap {
     padding-top: 2.4375rem;
+    width: var(--content-width);
 }
 
 
@@ -52,6 +104,7 @@
     display: grid;
     grid-template-columns: repeat(4, var(--_col-width) );
 }
+
 
 .col-1-2 {
     grid-column-start: 1;
@@ -415,6 +468,12 @@ margin-bottom: 2.125rem;
     padding: 0;
 }
 
+.mortgage-addon-head {
+    background-color:#F2F4F8;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
 
 
 
@@ -423,9 +482,12 @@ margin-bottom: 2.125rem;
 
 
 
-
-
-
+@media screen and (max-width: 1000px) {
+    .section-hc-about-carousel-dbl {
+        min-width: calc(100% + 24px); 
+    }
+    
+}
 
 
 
@@ -436,7 +498,9 @@ margin-bottom: 2.125rem;
     margin: 0 0;
     width: 100vw;
     padding-inline: 36px;
+    overflow-x: hidden;
 }
+
 
 .section-typical-layouts .carousel-wrap div img {
     width: calc(100vw - 36px);
@@ -468,7 +532,7 @@ margin-bottom: 2.125rem;
 
 .section-hc-about-carousel {
     order: 2;
-    min-width: calc(100% + 36px/2);
+    min-width: calc(100% + 36px/2 + 18px);
     margin-top: 2.5rem;
 }
 
@@ -512,15 +576,18 @@ margin-bottom: 2.125rem;
 .mortgage-table-item-addon {
     padding-right: clamp(1rem, -7.2353rem + 23.5294vw, 6rem);
 }
-/* .section-mortgage .section-wrap {
-    padding-inline: 20px ;
-    width: 95%;
-    margin-inline: auto;
-} */
+
+.section-mortgage .section-wrap {
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
 
 .mortgage-addon-item > *:nth-child(2), .mortgage-addon-head>*:nth-child(2) {
     min-width: clamp(1.875rem, -15.625rem + 50vw, 12.5rem);
 }
+
+
 
 
 }
@@ -537,23 +604,49 @@ margin-bottom: 2.125rem;
 
 @media screen and (max-width: 560px) {
 
+    .right-side-controls {
+        display: none;
+    }
+
+    .hide560 {
+        display: none;
+    }
+
+    .only560 {
+        display: inline-block;
+    }
+
     .section-hero {
-        height: 480px;
+        height: 530px;
         background-image: url('../img/hero/hero.webp');
         background-position: center;
     }
 
-    .section-hero .section-wrap {
+    .section-hero .section-wrap ,
+    .section-hc-about .section-wrap {
         margin-inline:0 ;
         width: 100%;
-        outline: 2px solid red;
         padding-inline: 24px;
-        
+        overflow-x:hidden;
+    }
+
+    .section-hc-about {
+        border-radius: 24px;
+    }
+
+    .section-nav-menu {
+        width: calc(100vw);
+        margin-bottom: 2rem;
+    }
+
+    .section-nav-menu ul:last-child{
+        margin-right: 2rem;
     }
 
     .section-hero h1 {
         margin-bottom: 1rem;
         max-width: 5ch;
+        white-space: wrap;
     }
 
     .section-hero .col-2-4 .tag-wrap {
@@ -565,4 +658,143 @@ margin-bottom: 2.125rem;
     .section-hero .col-2-4 .tag-wrap>*{
         width: fit-content;
     }
+
+    .section-nav-menu a {
+        white-space: nowrap;
+    }
+
+    .section-hc-adress-official-combo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .official-site-wrap,.section-hc-about-adress {
+        gap: 0.75rem;
+    }
+
+    .section-hc-adress-official-combo {
+        gap: 1rem;
+    }
+    
+    .section-hc-about h2 {
+        font-size: 1.25rem;
+        line-height: 1.4375rem;
+    }
+
+    .section-hc-about .text p {
+        font-size: 0.875rem;
+        font-weight: 300;
+        line-height: 1.125rem;
+    }
+
+    .section-hc-about-tag-wrap {
+        margin-top: 2.375rem;
+    }
+
+    .text h3:first-child {
+        margin-top:2.75rem ;
+    }
+
+    #carousel_004 .card-item {
+        min-width: 124px;
+    }
+
+    #carousel_004 .card-item p {
+        max-width: 15ch;
+    }
+
+    .section-hc-about-carousel-dbl {
+        margin-top: 3.5rem;
+    }
+
+    #carousel_004 .card-item {
+        padding: 20px;
+    }
+
+    #carousel_004 .card-item p {
+        font-size: 0.75rem;
+        line-height: 1.05rem;
+    }
+
+    .section-filter {
+        margin-top: -1.5rem;
+    }
+
+    .section-typical-layouts .section-wrap {
+        padding-inline: 1rem;
+
+    }
+
+    .section-typical-layouts .carousel-container .carousel-wrap {
+        padding-right: 1rem;
+        width: calc(100%);
+    }
+
+    .section-typical-layouts .carousel-container {
+        width: calc(100% + 18px);
+    }
+
+    .section-typical-layouts .carousel-container {
+        margin-top: 2.4375rem;
+    }
+
+    .section-mortgage h2 {
+        text-align: center;
+        display: block;
+        width: 100%;
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.9375rem;
+        max-width: 10ch;
+        margin: 0 auto;
+    }
+
+    .section-mortgage .section-wrap {
+        padding-inline: 0.75rem;
+    }
+
+    .mortgage-table-item-head h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 1.25rem;
+        line-height: 1.4375rem;
+    }
+
+    .mortgage-addon-head > span:last-of-type::before {
+        content: '1-Й';
+    }
+
+    .mortgage-addon-head span  {
+        font-size: 12px;
+    }
+
+    .mortgage-addon-item {
+        font-size: 14px;
+    }
+
+    .mortgage-table-item-addon {
+        padding-right: 1rem;
+        transform: scaleX(1.05);
+    }
+
+    .mortgage-addon-head svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    .mortgage-addon-item > *:nth-child(2)  {
+        text-align: center;
+        
+    }
+
+    .mortgage-addon-head>*:nth-child(2) {
+        display: flex;
+        place-items: center;
+        transform: translateX(15%);
+    }
+
+
+
+
 }
