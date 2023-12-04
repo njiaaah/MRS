@@ -73,6 +73,7 @@ header .info-wrap p {
 .official-site-wrap {
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 .hc-radio-01 > h2 {
     font-size: 1.5rem;
