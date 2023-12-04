@@ -49,7 +49,7 @@ header .info-wrap p {
 #section-hc-radio-03:not(:checked) ~ .section-hc-about .section-wrap .hc-radio-03 {
     display: none;
 }
-
+ 
 #section-hc-radio-04:not(:checked) ~ .section-hc-about .section-wrap .hc-radio-04 {
     display: none;
 }
@@ -68,8 +68,6 @@ header .info-wrap p {
 
 .grid-left {
     padding-right: 2rem;
-}
-.grid-right {
 }
 
 .official-site-wrap {
