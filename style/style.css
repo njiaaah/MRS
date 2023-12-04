@@ -26,7 +26,8 @@
     transition: transform 250ms, box-shadow 250ms;
 }
 
-.section-expert-estate > div:first-of-type > div:first-of-type > a:hover {
+.section-expert-estate > div:first-of-type > div:first-of-type > a:hover,
+.pretty-hover:hover {
     transform: scale(1.0125);
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     /* border: 1px solid var(--clr-greyscale-0); */
@@ -145,7 +146,7 @@
     top: 15rem;
     right: 0;
     gap: 0.;
-    z-index: 5;
+    z-index: 25;
 }
 
 .section-expert-estate-bottom-text {

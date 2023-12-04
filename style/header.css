@@ -31,7 +31,7 @@
         border-radius: 0px;
     }
 
-    header .drop-down:nth-of-type(2) {
+    header .drop-down-02 {
         width: 220px;
         transform: translateY(-50%) translateX(-15px) translateX(65%);
     }
@@ -42,7 +42,7 @@
     }
     
     
-    @media screen and (max-width: 1185px) {
+    @media screen and (max-width: 1142px) {
         header .drop-down:nth-of-type(2) {
             display: none;
         }

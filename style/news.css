@@ -1,0 +1,98 @@
+
+.section-hc-news-carousel {
+    --_item-width: 256px;
+    --_item-width: 210px;
+    --_item-width: clamp(13.125rem, 6.3158rem + 12.1053vw, 16rem);
+    --_gap: 2rem;
+    --_gap: 1rem;
+    --_gap: clamp(1rem, -1.3684rem + 4.2105vw, 2rem);
+    width: calc( var(--_item-width)*3 + var(--_gap)*2 + 1px );
+   
+}
+
+.section-hc-news-carousel .carousel-wrap {
+    gap: var(--_gap);
+    padding-right: 6rem;
+    
+}
+
+.double-news-card-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: calc( var(--_gap) - .25rem );
+    min-width: var(--_item-width);
+}
+
+.news-card {
+    border: 1px solid var(--clr-greyscale-4);
+    padding: 2rem;
+    padding-bottom: 3rem;
+    height: 13.0625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    text-decoration: none;
+}
+
+.news-card-date {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    color: var(--clr-greyscale-4);
+}
+
+.news-card-heading {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    max-width: 20ch;
+    color: var(--clr-primary-darkblue);
+    transition: transform 250ms;
+    transform-origin: 0 50% ;
+    /* outline: 2px solid red; */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+
+.sneaky-hover:hover .news-card-heading {
+    transform: scale(1.1) translateX(-2px);
+}
+
+@media screen and (max-width: 900px) {
+
+
+    .section-hc-news-carousel {
+        --_item-width: 260px;
+        --_item-width: 195px;
+        --_item-width: clamp(12.1875rem, -1.1607rem + 30.9524vw, 16.25rem);
+        --_gap: .5rem;       
+    }
+
+    .double-news-card-wrap {
+        gap: var(--_gap);
+    }
+
+    .order-3-720 {
+        order: 3;
+    }
+
+    .order-2-720 {
+        order: 2;
+    }
+
+    
+.section-hc-news-carousel .carousel-wrap {
+    padding-right: 2.5rem;
+}
+
+.news-card-heading {
+    font-size: 1.125rem;
+}
+
+}

@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="style/footer.css">
     <link rel="stylesheet" href="style/hero.css">
     <link rel="stylesheet" href="style/filter.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/news.css">
     <script src="lib/nouislider.min.js"></script>
     <script src="lib/dragscroll.js"></script>
     <script src="lib/jquery.js"></script>
@@ -19,6 +21,59 @@
 <body>
 
     <main>
+
+        <form class="modal" id="callback-modal" style="display: none;">
+
+            <div class="modal-wrap">
+
+                <span class="modal-close-btn" id="modal-close-btn-01">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 1L1 13M1 1L13 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg> 
+                </span>
+
+                <h2>Перезвоните мне</h2>
+
+                <div class="input-grid">
+                    <div class="input-wrap">
+                        <span>ФИО</span>
+                        <input type="text">
+                    </div>
+                    <div class="input-wrap">
+                        <span>E-mail</span>
+                        <input type="email">
+                    </div>
+                    <div class="input-wrap">
+                        <span>Номер телефона</span>
+                        <input type="tel" placeholder="+7">
+                    </div>
+                    <div class="input-wrap">
+                        <span>Удобное время для звонка</span>
+                        <input type="text">
+                    </div>
+                </div>
+
+                <div class="modal-agreement">
+                    <input type="checkbox" name="" id="modal-agreement-01" checked>
+                    <label for="modal-agreement-01">
+                        Согласие на получение данных об акция, скидках, новых услугах и предложениях
+                    </label>
+
+                </div>
+
+                <div class="confirm-wrap">
+                    <button class="btn btn-blue">Жду звонка</button>
+                    <span>
+                        Отправляя заявку, Вы даете согласие на обработку 
+                        <a href="#">персональных данных</a>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="modal-backdrop"></div>
+
+        </form>
 
         <div class="header-wrap">
 
@@ -54,7 +109,7 @@
         
                     </div>
 
-                    <div class="drop-down">
+                    <div class="drop-down drop-down-02">
                         <ul id="dropDownUl02">
                             <li><a href="#">Жилая недвижимость</a><label for="header-about-list-toggle02"><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
                             <li hidden><a href="#">Коммерческая недвижимость</a></li>
@@ -80,7 +135,7 @@
                                 <path d="M21.9701 18.33C21.9701 18.61 21.9201 18.9 21.8201 19.18C21.7901 19.26 21.7601 19.34 21.7201 19.42C21.5501 19.78 21.3301 20.12 21.0401 20.44C20.5501 20.98 20.0101 21.37 19.4001 21.62C19.3901 21.62 19.3801 21.63 19.3701 21.63C18.7801 21.87 18.1401 22 17.4501 22C16.4301 22 15.3401 21.76 14.1901 21.27C13.0401 20.78 11.8901 20.12 10.7501 19.29C10.3601 19 9.9701 18.71 9.6001 18.4L12.8701 15.13C13.1501 15.34 13.4001 15.5 13.6101 15.61C13.6601 15.63 13.7201 15.66 13.7901 15.69C13.8701 15.72 13.9501 15.73 14.0401 15.73C14.2101 15.73 14.3401 15.67 14.4501 15.56L15.2101 14.81C15.4601 14.56 15.7001 14.37 15.9301 14.25C16.1601 14.11 16.3901 14.04 16.6401 14.04C16.8301 14.04 17.0301 14.08 17.2501 14.17C17.4701 14.26 17.7001 14.39 17.9501 14.56L21.2601 16.91C21.5201 17.09 21.7001 17.3 21.8101 17.55C21.9101 17.8 21.9701 18.05 21.9701 18.33Z" fill="white"/>
                             </svg> 
                         </a>
-                        <button class="btn btn-blue">
+                        <button class="btn btn-blue open-callback-modal">
                             Связаться с нами
                         </button>
                     </div>
@@ -132,29 +187,11 @@
 
         </div>
 
-        <div class="right-side-controls">
+        <div class="section-expert-estate-callback">
+            <span class="open-callback-modal" href="#"><img src="./img/icons/telephone.svg" alt=""></span>
+             <a href="#"><img src="./img/icons/hammer.svg" alt=""></a>
+         </div>
 
-            <span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.05 14.95L9.2 16.8C8.81 17.19 8.19 17.19 7.79 16.81C7.68 16.7 7.57 16.6 7.46 16.49C6.43 15.45 5.5 14.36 4.67 13.22C3.85 12.08 3.19 10.94 2.71 9.81C2.24 8.67 2 7.58 2 6.54C2 5.86 2.12 5.21 2.36 4.61C2.6 4 2.98 3.44 3.51 2.94C4.15 2.31 4.85 2 5.59 2C5.87 2 6.15 2.06 6.4 2.18C6.66 2.3 6.89 2.48 7.07 2.74L9.39 6.01C9.57 6.26 9.7 6.49 9.79 6.71C9.88 6.92 9.93 7.13 9.93 7.32C9.93 7.56 9.86 7.8 9.72 8.03C9.59 8.26 9.4 8.5 9.16 8.74L8.4 9.53C8.29 9.64 8.24 9.77 8.24 9.93C8.24 10.01 8.25 10.08 8.27 10.16C8.3 10.24 8.33 10.3 8.35 10.36C8.53 10.69 8.84 11.12 9.28 11.64C9.73 12.16 10.21 12.69 10.73 13.22C10.83 13.32 10.94 13.42 11.04 13.52C11.44 13.91 11.45 14.55 11.05 14.95Z" fill="white"/>
-                    <path d="M21.9696 18.33C21.9696 18.61 21.9196 18.9 21.8196 19.18C21.7896 19.26 21.7596 19.34 21.7196 19.42C21.5496 19.78 21.3296 20.12 21.0396 20.44C20.5496 20.98 20.0096 21.37 19.3996 21.62C19.3896 21.62 19.3796 21.63 19.3696 21.63C18.7796 21.87 18.1396 22 17.4496 22C16.4296 22 15.3396 21.76 14.1896 21.27C13.0396 20.78 11.8896 20.12 10.7496 19.29C10.3596 19 9.96961 18.71 9.59961 18.4L12.8696 15.13C13.1496 15.34 13.3996 15.5 13.6096 15.61C13.6596 15.63 13.7196 15.66 13.7896 15.69C13.8696 15.72 13.9496 15.73 14.0396 15.73C14.2096 15.73 14.3396 15.67 14.4496 15.56L15.2096 14.81C15.4596 14.56 15.6996 14.37 15.9296 14.25C16.1596 14.11 16.3896 14.04 16.6396 14.04C16.8296 14.04 17.0296 14.08 17.2496 14.17C17.4696 14.26 17.6996 14.39 17.9496 14.56L21.2596 16.91C21.5196 17.09 21.6996 17.3 21.8096 17.55C21.9096 17.8 21.9696 18.05 21.9696 18.33Z" fill="white"/>
-                    </svg>
-                    
-            </span>
-
-            <span>
-                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.126953 24.6549C0.126953 24.0336 0.396363 23.5299 0.728697 23.5299H16.7752C17.1075 23.5299 17.377 24.0336 17.377 24.6549C17.377 25.2763 17.1075 25.7799 16.7752 25.7799H0.728697C0.396363 25.7799 0.126953 25.2763 0.126953 24.6549Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.37695 22.4049C2.37695 21.7836 2.57608 21.2799 2.82172 21.2799H14.6822C14.9278 21.2799 15.127 21.7836 15.127 22.4049C15.127 23.0263 14.9278 23.5299 14.6822 23.5299H2.82172C2.57608 23.5299 2.37695 23.0263 2.37695 22.4049Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8892 10.7546C14.3286 10.3153 14.9285 10.2029 15.2292 10.5036L24.3036 19.5779C24.6043 19.8786 24.4919 20.4785 24.0525 20.9179C23.6132 21.3572 23.0133 21.4696 22.7126 21.1689L13.6382 12.0946C13.3375 11.7939 13.4499 11.1939 13.8892 10.7546Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.42928 10.8414C4.86862 10.402 5.3965 10.2176 5.60832 10.4294L12.0007 16.8218C12.2125 17.0336 12.0281 17.5615 11.5887 18.0008C11.1494 18.4402 10.6215 18.6246 10.4097 18.4128L4.01733 12.0204C3.80551 11.8086 3.98994 11.2807 4.42928 10.8414Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.20226 6.06841C10.8132 4.4575 12.2908 3.32332 12.5026 3.53514L18.895 9.92751C19.1068 10.1393 17.9726 11.617 16.3617 13.2279C14.7508 14.8388 13.2732 15.973 13.0614 15.7611L6.66898 9.36877C6.45716 9.15695 7.59134 7.67933 9.20226 6.06841Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9752 1.29544C14.4146 0.856104 14.9424 0.671667 15.1543 0.883491L21.5466 7.27586C21.7585 7.48769 21.574 8.01556 21.1347 8.4549C20.6953 8.89424 20.1675 9.07868 19.9556 8.86685L13.5633 2.47448C13.3514 2.26266 13.5359 1.73478 13.9752 1.29544Z" fill="white"/>
-                    </svg>
-                    
-            </span>
-
-        </div>
 
         <section class="section-hero">
 
@@ -177,21 +214,35 @@
 
         </section>
 
+        <!-- SECTION HC ABOUT MENU RADIO -->
+
+            <input type="radio" name="section-hc-radio" id="section-hc-radio-01" >
+            <input type="radio" name="section-hc-radio" id="section-hc-radio-02" >
+            <input type="radio" name="section-hc-radio" id="section-hc-radio-03" checked>
+            <input type="radio" name="section-hc-radio" id="section-hc-radio-04" >
+            <input type="radio" name="section-hc-radio" id="section-hc-radio-05" >
+
+        <!--  -->
+
         <section class="section-hc-about">
+
+
 
             <div class="section-wrap grid-2-4 carousel-container">
 
                 <nav class="section-nav-menu col-2-4 carousel-wrap dragscroll">
-                    <ul><a class="selected" href="">Описание</a></ul>
-                    <ul><a href="">Инфраструктура</a></ul>
-                    <ul><a href="">Новости</a></ul>
-                    <ul><a href="">Документы</a></ul>
-                    <ul><a href="">Офис продаж</a></ul>
+                    <ul><label for="section-hc-radio-01" href="">Описание</label></ul>
+                    <ul><label for="section-hc-radio-02" href="">Инфраструктура</label></ul>
+                    <ul><label for="section-hc-radio-03" href="">Новости</label></ul>
+                    <ul><label for="section-hc-radio-04" href="">Документы</label></ul>
+                    <ul><label for="section-hc-radio-05" href="">Офис продаж</label></ul>
                 </nav>
 
-                <div class="section-hc-adress-official-combo">
+                <!-- ALWAYS -->
 
-                    <div class="section-hc-about-adress" style="grid-row-start: 2;">
+                <div class="section-hc-adress-official-combo order-2-720" >
+
+                    <div class="section-hc-about-adress">
 
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="16" cy="16" r="16" fill="#16215B"/>
@@ -200,23 +251,26 @@
                             
                         <p>
                             г. Москва, ЗАО <br>
-                            Мичуринский <br class="hide560"> <span class="hide560">проспект</span><span class="only560">пр-т</span>,<br> вл. 45  
+                            Мичуринский <br class="hide560 hide900"> <span class="hide560">проспект</span><span class="only560">пр-т</span>,<br> вл. 45  
                         </p>
+
+                        <a class="official-site-wrap">
+                            <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5676 5.08911C15.2613 5.23762 14.99 5.57484 14.99 6.098V7.80727C14.99 8.35956 14.5423 8.80727 13.99 8.80727H10.91C6.7976 8.80727 3.18318 12.4298 3.00674 17.1329C4.9848 15.2065 7.56425 14.1002 10.36 14.1002H13.99C14.5423 14.1002 14.99 14.5479 14.99 15.1002V17.7211C14.99 18.2442 15.2613 18.5814 15.5676 18.73C15.8737 18.8784 16.2175 18.849 16.4942 18.5886C16.4941 18.5887 16.4942 18.5885 16.4942 18.5886L22.6345 12.7956C23.1522 12.2437 23.0799 11.4281 22.6684 11.0551L22.6538 11.0416L16.4944 5.23067C16.4943 5.23053 16.4946 5.23081 16.4944 5.23067C16.2178 4.97043 15.8737 4.94067 15.5676 5.08911ZM14.6949 3.28951C15.6812 2.8113 16.9323 2.89579 17.8656 3.77469L24.0197 9.58064C25.3562 10.8009 25.2841 12.9308 24.0595 14.1994C24.0486 14.2106 24.0376 14.2215 24.0262 14.2322L17.8662 20.0438C16.933 20.9227 15.6812 21.0078 14.6949 20.5295C13.7087 20.0513 12.99 19.0211 12.99 17.7211V16.1002H10.36C7.32778 16.1002 4.55849 17.716 2.85454 20.5195C2.62164 20.9027 2.16212 21.084 1.73031 20.963C1.29851 20.8421 1 20.4485 1 20.0001V17.4932C1 11.6588 5.44679 6.80727 10.91 6.80727H12.99V6.098C12.99 4.79794 13.7087 3.76773 14.6949 3.28951Z" fill="#0373FF"/>
+                            </svg>
+                            Официальный <br class="hide560">сайт
+                                
+                        </a>
     
                     </div>
 
-                    <a class="official-site-wrap">
-                        <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5676 5.08911C15.2613 5.23762 14.99 5.57484 14.99 6.098V7.80727C14.99 8.35956 14.5423 8.80727 13.99 8.80727H10.91C6.7976 8.80727 3.18318 12.4298 3.00674 17.1329C4.9848 15.2065 7.56425 14.1002 10.36 14.1002H13.99C14.5423 14.1002 14.99 14.5479 14.99 15.1002V17.7211C14.99 18.2442 15.2613 18.5814 15.5676 18.73C15.8737 18.8784 16.2175 18.849 16.4942 18.5886C16.4941 18.5887 16.4942 18.5885 16.4942 18.5886L22.6345 12.7956C23.1522 12.2437 23.0799 11.4281 22.6684 11.0551L22.6538 11.0416L16.4944 5.23067C16.4943 5.23053 16.4946 5.23081 16.4944 5.23067C16.2178 4.97043 15.8737 4.94067 15.5676 5.08911ZM14.6949 3.28951C15.6812 2.8113 16.9323 2.89579 17.8656 3.77469L24.0197 9.58064C25.3562 10.8009 25.2841 12.9308 24.0595 14.1994C24.0486 14.2106 24.0376 14.2215 24.0262 14.2322L17.8662 20.0438C16.933 20.9227 15.6812 21.0078 14.6949 20.5295C13.7087 20.0513 12.99 19.0211 12.99 17.7211V16.1002H10.36C7.32778 16.1002 4.55849 17.716 2.85454 20.5195C2.62164 20.9027 2.16212 21.084 1.73031 20.963C1.29851 20.8421 1 20.4485 1 20.0001V17.4932C1 11.6588 5.44679 6.80727 10.91 6.80727H12.99V6.098C12.99 4.79794 13.7087 3.76773 14.6949 3.28951Z" fill="#0373FF"/>
-                        </svg>
-                        Официальный <br class="hide560">сайт
-                            
-                    </a>
+
 
                 </div>
 
+                <!-- ALWAYS -->
 
-                <div class="section-hc-about-adress" style="grid-row-start: 2;">
+                <div class="row-2 section-hc-about-adress" style="grid-row-start: 2;">
 
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="16" cy="16" r="16" fill="#16215B"/>
@@ -230,7 +284,9 @@
 
                 </div>
 
-                <div class="col-2-4 text">
+                <!-- RADIO 01 -->
+
+                <div class="col-2-4 text hc-radio-01">
 
                     <h2>ЖК «Инноватор» — это две 28-этажных башни с подземным паркингом в запоминающемся архитектурном решении от известного бюро СПИЧ. </h2>
 
@@ -238,7 +294,9 @@
 
                 </div>
 
-                <a class="official-site-wrap">
+                <!-- ALWAYS -->
+
+                <a class="row-3 official-site-wrap">
                     <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5676 5.08911C15.2613 5.23762 14.99 5.57484 14.99 6.098V7.80727C14.99 8.35956 14.5423 8.80727 13.99 8.80727H10.91C6.7976 8.80727 3.18318 12.4298 3.00674 17.1329C4.9848 15.2065 7.56425 14.1002 10.36 14.1002H13.99C14.5423 14.1002 14.99 14.5479 14.99 15.1002V17.7211C14.99 18.2442 15.2613 18.5814 15.5676 18.73C15.8737 18.8784 16.2175 18.849 16.4942 18.5886C16.4941 18.5887 16.4942 18.5885 16.4942 18.5886L22.6345 12.7956C23.1522 12.2437 23.0799 11.4281 22.6684 11.0551L22.6538 11.0416L16.4944 5.23067C16.4943 5.23053 16.4946 5.23081 16.4944 5.23067C16.2178 4.97043 15.8737 4.94067 15.5676 5.08911ZM14.6949 3.28951C15.6812 2.8113 16.9323 2.89579 17.8656 3.77469L24.0197 9.58064C25.3562 10.8009 25.2841 12.9308 24.0595 14.1994C24.0486 14.2106 24.0376 14.2215 24.0262 14.2322L17.8662 20.0438C16.933 20.9227 15.6812 21.0078 14.6949 20.5295C13.7087 20.0513 12.99 19.0211 12.99 17.7211V16.1002H10.36C7.32778 16.1002 4.55849 17.716 2.85454 20.5195C2.62164 20.9027 2.16212 21.084 1.73031 20.963C1.29851 20.8421 1 20.4485 1 20.0001V17.4932C1 11.6588 5.44679 6.80727 10.91 6.80727H12.99V6.098C12.99 4.79794 13.7087 3.76773 14.6949 3.28951Z" fill="#0373FF"/>
                     </svg>
@@ -246,8 +304,9 @@
                         
                 </a>
 
+                <!-- RADIO 01 -->
 
-                <div class="col-2-4 section-hc-about-carousel carousel-container">
+                <div class="col-2-4 row-3 section-hc-about-carousel carousel-container hc-radio-01">
 
                     <div class="carousel-wrap dragscroll snapsinline" id="carousel_003">
                         
@@ -288,7 +347,7 @@
 
                 </div>
 
-                <div class="col-1-6 section-hc-about-tag-wrap flex">
+                <div class="col-1-6 section-hc-about-tag-wrap flex ">
                     <span class="btn btn-light-grey">Окружение</span>
                     <span class="btn btn-light-grey">Расположение</span>
                     <span class="btn btn-light-grey">Архитектура</span>
@@ -297,7 +356,7 @@
                     <span class="btn btn-light-grey">Своя среда</span>
                 </div>
 
-                <div class="col-2-4 text">
+                <div class="col-2-4 text ">
 
                     <h3>Окружение</h3>
 
@@ -326,7 +385,6 @@
                     <p>В новое через верность традициям!Чтобы соблюсти баланс между стремительным городским ритмом жизни, природой и гармонией ландшафтные дизайнеры предусмотрели пространства для отдыха. На стилобате здания уровня второго этаже в центре города появится полноценный благоустроенный парящий над землей сад. На территории ЖК «Инноватор» разместятся игровые и спортивные площадки, зоны отдыха, доступные только для жителей. Это пространство с ландшафтным дизайном идеально подходит для встреч, прогулок с детьми на обустроенных игровых маршрутах, занятий спортом на площадках воркаут. Экономить дорогое для жителя города время позволит собственная инфраструктура. На первых этажах здания есть все нужное: магазины, гастрономия, салоны красоты, фитнес и сервисные центры. Собственная инфраструктура жилого комплекса отвечает даже самым взыскательным потребностям. В ЖК «Инноватор» можно позволить себе кофе раннем утром, чтобы зарядится энергией нового дня, или бокал вина вечером в кругу инноваторов!</p>
 
                 </div>
-
 
 
                 <div class="col-1-6 section-hc-about-carousel-dbl carousel-container">
@@ -439,11 +497,166 @@
                     </div>
 
                 </div>
-                 
+
+                <!-- RADIO 03 -->
+                <!-- news.css -->
+
+                    <div class="col-2-4 row-2 section-hc-news-carousel carousel-container hc-radio-03 order-3-720">
+
+                        <div class="carousel-wrap dragscroll snapsinline" id="carousel_news">
+
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, necessitatibus?</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Очень длинный заголовок для теста, а Вы знали, что несмотря на свою устрашающую репутацию, крокодилы, как известно, склонны к поведению, которое называется «крокодиловый плач». Иногда они издают звуки, похожие на плач или хныканье. Однако не обманывайтесь – это не потому, что они грустят или раскаиваются. На самом деле для них это способ общения друг с другом, особенно во время брачного сезона. Итак, если вы слышите плач крокодила, возможно, он просто ищет любви, а не сочувствия!</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+                            <div class="double-news-card-wrap">
+                                
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+                                <a href="#" class="news-card sneaky-hover">
+                                    <span class="news-card-date">20 ноября</span>
+                                    <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                                </a>
+
+                            </div>
+    
+                        </div>
+        
+                        <div class="carousel-controls" id="carousel_news_controls">
+                            <span class="active-point"></span>
+                            <span class=""></span>
+                            <span class=""></span>
+                            <span class=""></span>
+                        </div>                        
+    
+                    </div>
+
+
+
+                </div>
 
                    
 
-            </div>
+            </div >
 
         </section>
 
@@ -1905,7 +2118,6 @@
 
         </section>
 
-
         <footer id="footer">
 
             <div class="section-wrap">
@@ -2159,15 +2371,14 @@
 
         </footer>
 
-
     </main>
     
-
     <script src="script/script.js"></script>
     <script src="script/scrollers.js"></script>
     <script src="script/sliders.js"></script>
     <script src="script/header.js"></script>
     <script src="script/filter.js"></script>
     <script src="script/housecomplex.js"></script>
+    <script src="script/modal.js"></script>
 </body>
 </html>

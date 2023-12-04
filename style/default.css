@@ -233,3 +233,23 @@ button, .btn {
 .scaleY-1 {
     transform: scaleY(-1);
 }
+
+/*  */
+
+.pretty-hover, .sneaky-hover, .one-hover {
+    transition: box-shadow 250ms, transform 250ms, opacity 250ms;
+}
+
+.pretty-hover:hover {
+    transform: scale(1.0125);
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: relative;
+    z-index: 20;
+}
+
+.sneaky-hover:hover {
+    transform: scale(.95);
+}
+
+
+

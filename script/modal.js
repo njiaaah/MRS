@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         modals.forEach(modal => {
             modal.style.display = 'none' 
             document.body.style.overflow = 'auto'
-            document.body.style.paddingRight = '0px'
+            // document.body.style.paddingRight = '0px'
         });
     }
 
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         button.addEventListener('click',()=>{
             document.getElementById('callback-modal').style.display = 'block'
             document.body.style.overflow = 'hidden'
-            document.body.style.paddingRight = '18px'
+            // document.body.style.paddingRight = '18px'
         }) 
     });
 
