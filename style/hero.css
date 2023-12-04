@@ -16,39 +16,25 @@ header .info-wrap p {
     z-index: 100;
 }
 
+.section-hc-adress-official-combo {
+    /* gap: 140px; */
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 
 /* section hc about chb logic */
 
 
-#section-hc-radio-01:checked ~ .section-hc-about .section-wrap > .section-nav-menu ul:nth-child(1) label,
-#section-hc-radio-02:checked ~ .section-hc-about .section-wrap > .section-nav-menu ul:nth-child(2) label,
-#section-hc-radio-03:checked ~ .section-hc-about .section-wrap > .section-nav-menu ul:nth-child(3) label,
-#section-hc-radio-04:checked ~ .section-hc-about .section-wrap > .section-nav-menu ul:nth-child(4) label,
-#section-hc-radio-05:checked ~ .section-hc-about .section-wrap > .section-nav-menu ul:nth-child(5) label{
+#section-hc-radio-01:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(1) label,
+#section-hc-radio-02:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(2) label,
+#section-hc-radio-03:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(3) label,
+#section-hc-radio-04:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(4) label,
+#section-hc-radio-05:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(5) label{
     border-bottom: 1px solid var(--clr-primary-lightblue); 
 }
-
-/* radio 3 */
-
-#section-hc-radio-03:checked ~ .section-hc-about .section-wrap .official-site-wrap {
-    position: absolute;
-    transform: translateY(-500%);
-}
-
-
-
-
-@media screen and (max-width: 1000px) {
-
-    #section-hc-radio-03:checked ~ .section-hc-about .section-wrap .official-site-wrap {
-        position: static;
-        transform: translateY(0);
-    }
-    
-
-}
-
 
 /* hide stuff */
 
@@ -64,7 +50,6 @@ header .info-wrap p {
     display: none;
 }
 
-
 #section-hc-radio-04:not(:checked) ~ .section-hc-about .section-wrap .hc-radio-04 {
     display: none;
 }
@@ -73,6 +58,44 @@ header .info-wrap p {
     display: none;
 }
 
+.hc-about-grid-wrap {
+    --_col-width: clamp(10.0625rem, -4rem + 25vw, 16rem);
+    display: grid;
+    grid-template-columns: var(--_col-width) calc(var(--_col-width)*3) ;
+    margin: 0 auto;
+    padding-inline: 2.5rem;
+}
+
+.grid-left {
+    padding-right: 2rem;
+}
+.grid-right {
+}
+
+.official-site-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hc-radio-01 > h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.75rem;
+    max-width: 44ch;
+    margin-bottom: 2.125rem;
+}
+.hc-radio-01 > p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-primary-darkblue);
+}
+
+.grid-full {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 
 
 
@@ -82,7 +105,7 @@ header .info-wrap p {
 
 
 section+section .section-wrap {
-    --_wrap-padding: 48px;
+    --_wrap-padding: 3rem;
     padding-inline: var(--_wrap-padding) ;
 
 }
@@ -142,50 +165,6 @@ section+section .section-wrap {
     width: var(--content-width);
 }
 
-
-.grid-2-4 {
-    --_col-width: 256px;
-    --_col-width: 167px;
-    --_col-width: clamp(10.0625rem, -4rem + 25vw, 16rem);
-    display: grid;
-    grid-template-columns: repeat(4, var(--_col-width) );
-}
-
-
-.col-1-2 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-.col-2-4 {
-    grid-column-start: 2;
-    grid-column-end: 6;
-    display: grid;
-    max-width: calc((var(--_col-width)*3) + var(--_wrap-padding)*2)
-}
-
-.col-1-6 {
-    grid-column-start: 1;
-    grid-column-end: 6;
-}
-
-.row-2 {
-    grid-row-start: 2;
-}
-
-.row-3 {
-    grid-row-start: 3;
-}
-.row-4 {
-    grid-row-start: 4;
-}
-.row-5 {
-    grid-row-start: 5;
-}
-.row-6 {
-    grid-row-start: 6;
-}
-
 .section-hero .col-2-4 .tag-wrap {
     display: flex;
 }
@@ -222,25 +201,25 @@ section+section .section-wrap {
     line-height: 1.5625rem;
 }
 
-.section-hc-about h2 {
-font-family: Geologica;
-font-size: 24px;
+.section-hc-about .section-wrap > .text h2 {
+font-size: 1.5rem;
 font-weight: 500;
-line-height: 28px;
+line-height: 1.75rem;
 letter-spacing: 0em;
 text-align: left;
 margin-bottom: 2.125rem;
+max-width: 44ch;
 
 }
 
 .section-hc-about .text p {
-    font-family: Geologica;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 20px;
+    line-height: 1.25rem;
     letter-spacing: 0em;
     text-align: left;
-    color: var(--clr-primary-darkblue);    
+    color: var(--clr-primary-darkblue);  
+    max-width: 67ch;  
 }
 
 .official-site-wrap {
@@ -257,21 +236,12 @@ margin-bottom: 2.125rem;
     grid-column-start: 1;
 }
 
-.section-hc-about-carousel {
-    position: relative;
-    margin-top: 2.6875rem;
+.section-hero .tag-wrap{
+    display: flex;
+    gap: 0;
 }
 
 
-.section-hc-about-carousel .carousel-wrap {
-    width: calc( var(--_col-width)*3 + var(--_wrap-padding) * 3  );
-    position: relative;
-    gap: 1rem;
-}
-
-.section-hc-about-carousel {
-    min-width: calc( var(--_col-width)*3 + var(--_wrap-padding) * 3  );
-}
 
 .section-hc-about-tag-wrap {
     margin-top: 70px;
@@ -279,10 +249,23 @@ margin-bottom: 2.125rem;
     flex-wrap: wrap;
 }
 
+.radio-01-carousel {
+    margin-top:2.6875rem;
+    width: calc(100% + 80px);
+
+}
+
+.radio-01-carousel .carousel-wrap {
+    gap: 1rem;
+    width: 100%;
+}
+
 
 
 #carousel_003_side_controls_prev,
-#carousel_003_side_controls_next {
+#carousel_003_side_controls_next,
+.side-controls
+ {
     width: 32px;
     aspect-ratio: 1;
     background-color: var(--clr-primary-darkblue);
@@ -297,7 +280,8 @@ margin-bottom: 2.125rem;
     
 }
 
-#carousel_003_side_controls_prev {
+#carousel_003_side_controls_prev,
+.side-controls-prev {
     left: 1rem;
 }
 
@@ -305,7 +289,8 @@ margin-bottom: 2.125rem;
     transform: translateX(-1px);
 }
 
-#carousel_003_side_controls_next {
+#carousel_003_side_controls_next,
+.side-controls-next {
     right: 1rem;
     
 }
@@ -513,9 +498,6 @@ margin-bottom: 2.125rem;
     content: 'от ';
 }
 
-.section-hc-adress-official-combo {
-    display: none;
-}
 
 .section-typical-layouts .carousel-container {
     margin-top: 3.25rem;
@@ -564,13 +546,42 @@ margin-bottom: 2.125rem;
     overflow-x: hidden;
 }
 
+.section-hc-adress-official-combo {
+    flex-direction: row;
+}
+
+.hc-about-grid-wrap {
+    display: flex;
+    flex-direction: column;
+    padding-inline: 0px;
+}
+
+.description-content-wrap {
+    display: flex;
+    flex-direction: column;
+}
+.description-content-wrap > *:nth-child(1) {
+    order: 2;
+}
+.description-content-wrap > *:nth-child(2) {
+    order: 3;
+}
+.description-content-wrap > *:nth-child(3) {
+    order: 1;
+}
+
+
+.radio-01-carousel {
+    width: calc(100% + 36px);
+}
+
 
 .section-nav-menu {
     margin-bottom: 1.875rem;
 }
 
 .section-hc-about-adress {
-    margin-bottom: 2.4688rem;
+    margin-bottom: 2.4375rem;
 }
 
 .hide900 {
@@ -594,11 +605,6 @@ margin-bottom: 2.125rem;
     order: 1;
 }
 
-.section-wrap > .section-hc-about-adress,
-.section-wrap > .official-site-wrap {
-    display: none;
-}
-
 .grid-2-4 {
     display: flex;
     flex-direction: column;
@@ -620,21 +626,6 @@ margin-bottom: 2.125rem;
 
 .section-hc-about-adress + .text {
     order: 3;
-}
-
-.col-2-4 {
-    max-width: none;
-}
-
-
-.section-hc-about-tag-wrap {order: 4;}
-
-.section-hc-about-tag-wrap + .text {order: 5;}
-
-.section-hc-about-carousel-dbl {order: 6;}
-
-.section-hc-about-carousel .carousel-wrap  {
-    width: 100%;
 }
 
 #carousel_004_controls {
@@ -668,6 +659,8 @@ margin-bottom: 2.125rem;
 .mortgage-addon-item > *:nth-child(2), .mortgage-addon-head>*:nth-child(2) {
     min-width: clamp(1.875rem, -15.625rem + 50vw, 12.5rem);
 }
+
+
 
 
 
@@ -756,14 +749,38 @@ margin-bottom: 2.125rem;
         min-width: 32px;
     }
 
+    .section-hc-about-adress {
+        margin-bottom: 1rem;
+    }
+
     .section-hc-adress-official-combo {
         gap: 1rem;
     }
 
-    .section-hc-about-adress {
-        display: flex;
-        flex-direction: column;
+    #carousel_003_side_controls_prev,
+    #carousel_003_side_controls_next {
+        display: none;
     }
+
+    .radio-01-carousel .carousel-wrap div img {
+        width: 264px;
+        height: 148px;
+    }
+
+
+    .grid-left {
+        padding-right: 0;
+    }
+
+    .section-hc-about-tag-wrap  {
+        display: flex;
+        gap: .5rem;
+    }
+
+    .radio-01-carousel .carousel-wrap {
+        padding-bottom: 1rem;
+    }
+
     
     .section-hc-about h2 {
         font-size: 1.25rem;

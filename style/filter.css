@@ -137,7 +137,8 @@ input[type=checkbox], input[type=radio],.section-filter-view-controls-720 {
 }
 
 .noUi-target {
-    --_slider-inner-width: 94%;
+    --_slider-inner-width: 93%;
+    padding-inline: 1px;
     position: relative;
     bottom: 0;
     margin: 0 auto;
@@ -334,6 +335,7 @@ color: var(--clr-greyscale-4);
 .filter-table-item-head {
     display: grid;
     gap: 2rem;
+    gap: 1rem;
     grid-template-columns: 192px  repeat(6, 8fr) 3fr 2.2fr;
     color: var(--clr-primary-darkblue);
     place-items: center;
@@ -511,15 +513,62 @@ white-space: nowrap;
     color: var(--clr-primary-darkblue);
 }
 
+.card-info-wrap span {
+    font-size: 14px;
+    font-size: 13px;
+    font-size: clamp(0.8125rem, 0.555rem + 0.4vw, 0.875rem);
+}
+
 .card-info-wrap span:nth-child(2) {
-    transform: translateX(-20%);
+   padding-right:3rem;
+   padding-right:0rem;
+   padding-right:clamp(0rem, -12.36rem + 19.2vw, 3rem);
 }
 
 .card-tags {
     margin-top: 2rem;
 }
 
+.room-select-container > label:nth-of-type(n+2) {
+    padding-inline: 15px;
+    padding-inline: clamp(0.625rem, -0.6625rem + 2vw, 0.9375rem);
+}
+
+.section-filter-controls {
+    gap: 1.2rem;
+    /* gap: .5rem; */
+}
+
+.noUi-target  {
+    --_slider-inner-width: 100%%;
+}
+.noUi-base {
+    margin-inline: 17px;
+    transform: translateX(-8px);
+}
+
+/* .noUi-horizontal .noUi-handle {
+    transform: translateX(-5px);
+}
+
+.noUi-horizontal .noUi-handle-upper {
+    --_x: clamp(0.3125rem, -1.49rem + 2.8vw, 0.75rem);
+    transform: translateX(-5px);
+
+} */
+
+
+
 @media screen and (max-width: 1030px) {
+
+    .room-select-container > label:nth-of-type(n+2) {
+        padding-inline: 15px;
+    }
+
+    .noUi-base {
+        margin-inline: 2.25vw;
+        transform: translateX(-7px);
+    }
 
     .section-filter .section-wrap{
         width: 95%;
@@ -537,6 +586,10 @@ white-space: nowrap;
     .section-filter-controls > *:nth-child(2) {
         grid-row-start: 2;
         grid-column-start: 1;
+    }
+
+    .card-info-wrap span {
+        font-size: 14px;
     }
 
     .section-filter-controls > *:nth-child(3) {
@@ -679,6 +732,12 @@ white-space: nowrap;
 }
 
 @media screen and (max-width: 560px) {
+
+    .noUi-base {
+        margin-inline: 4.25vw;
+        transform: translateX(-7.5px);
+    }
+
     .section-filter .section-wrap {
         padding-inline: 1rem;
         margin-inline: 0.4375rem; 

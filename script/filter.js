@@ -51,12 +51,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     sliderInit('sliderFilter01','sliderFilter01-lower', 'sliderFilter01-upper', 5, 50, 5, 50, 1 )
     sliderInit('sliderFilter02','sliderFilter02-lower', 'sliderFilter02-upper', 20, 150, 20, 150, 1 )
 
-
-
-
-
-
-
     // filter toggle addon show 
 
     // fire me on filter result amount change :^)
@@ -75,7 +69,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     getFilterResults()
 
-    
+    // enable tile view on 900px
+
+    const rowViewChb = document.querySelector('#filter-view-toggle-table')
+    const tileViewChb = document.querySelector('#filter-view-toggle-card')
+
+    console.log(window.innerWidth)
+
+    visualViewport.onresize = () => {
+      if(rowViewChb.checked && window.innerWidth < 900) {
+        tileViewChb.click()
+      }
+    }
 
     
 
