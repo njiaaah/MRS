@@ -1,0 +1,98 @@
+.q-a {
+    display: grid;
+    margin-bottom: 5rem;
+}
+
+.q-a h2 {
+    margin-left: 2rem;
+}
+
+.q-a-container {
+    display: grid;
+    margin-top: 2rem;
+    place-items: center;
+    gap: 2rem;
+}
+
+.q-a-item {
+    display: grid;
+    gap: 2rem;
+    width: 79%;
+}
+
+.q-a-head {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 1px solid var(--clr-greyscale-2);
+    padding-bottom: 1rem;
+}
+
+.q-a-head h5 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-primary-darkblue);
+}
+
+.q-a-toggle {
+    margin-right: 1rem;
+    position: relative;
+    top: -1rem;
+}
+
+.q-a-left-toggle {
+    height: 2px;
+    width: 16px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--clr-primary-lightblue);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.q-a-right-toggle {
+    height: 2px;
+    width: 16px;
+    position: absolute;
+    margin-top: 24px;
+    background-color: var(--clr-primary-lightblue);
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.q-a-addon p {
+    white-space: pre-line;
+    margin-bottom: 5rem;
+}
+
+.q-a-left-toggle-selected {
+    width: 10px;
+    height: 2px;
+    display: block;
+    transform: rotate(35deg);
+    background-color: var(--clr-primary-lightblue);
+    position: absolute;
+    margin-top: 24px;
+}
+
+.q-a-right-toggle-selected {
+    width: 10px;
+    height: 2px;
+    display: block;
+    transform: rotate(-35deg);
+    background-color: var(--clr-primary-lightblue);
+    position: absolute;
+    margin-top: 24px;
+    left: 8px;
+}
+
+@media screen and (max-width: 720px) {
+    
+    .q-a h2 {
+        margin-left: 0;
+    }
+}
