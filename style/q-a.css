@@ -71,6 +71,12 @@
 .q-a-addon p {
     white-space: pre-line;
     margin-bottom: 5rem;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: var(--clr-greyscale-8);
 }
 
 .q-a-left-right-toggle > div > span:first-of-type  {
