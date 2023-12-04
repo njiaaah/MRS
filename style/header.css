@@ -89,14 +89,12 @@
     }
 
 
-    header .drop-down ul li a:hover::after ,
-    header .drop-down ul li p:hover::after {
+    header .drop-down ul li >*:hover::after {
         transform: scaleX(1);
         opacity: 1;
     }
 
-    header .drop-down ul li a ,
-    header .drop-down ul li p {
+    header .drop-down ul li >* {
         text-decoration: none;
         color: var(--clr-greyscale-6);
         position: relative;

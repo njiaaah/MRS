@@ -378,7 +378,7 @@ color: var(--clr-greyscale-4);
     pointer-events: none;
 }
 
-.promo[active=true] {
+.promo[data-promo=true] {
     opacity: 1;
     user-select: all;
     pointer-events: all;

@@ -159,41 +159,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
-    // SCROLLER ARTICLE
-
-    var scrollerArticle = document.querySelector('#carousel_article')
-
-    if (document.querySelector('#carousel_article_controls')) {
-        var scrollerArticlecontrols = document.querySelector('#carousel_article_controls').children
-        scrollerArticle.addEventListener('scroll', () => {
-            updateScrollerControls(scrollerArticle, scrollerArticlecontrols)
-        })
-
-        for (let i = 0; i < scrollerArticlecontrols.length; i++) {
-            scrollerArticlecontrols[i].addEventListener('click', () => {
-                clickScrollerControls(scrollerArticle, scrollerArticlecontrols, i)
-            })
-        }
-    }
-
-    const scrollArticlePrev = document.querySelector('#carousel_article_side_controls_prev')
-    const scrollArticleNext = document.querySelector('#carousel_article_side_controls_next')
-
-    scrollArticlePrev.addEventListener('click', ()=>{
-        let offsetLeft = scrollerArticle.scrollLeft - (scrollerArticle.children[0].clientWidth + 16)
-        scrollerArticle.scrollTo ({
-            left: offsetLeft,
-            behavior: 'smooth'
-        })
-    })
-    scrollArticleNext.addEventListener('click', ()=>{
-        let offsetLeft = scrollerArticle.scrollLeft + (scrollerArticle.children[0].clientWidth + 16)
-        scrollerArticle.scrollTo ({
-            left: offsetLeft,
-            behavior: 'smooth'
-        })
-    })
-
     // scroller - id враппера со скролл эелементами
     // controls - id статус бара 
 

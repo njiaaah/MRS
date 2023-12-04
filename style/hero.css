@@ -27,11 +27,11 @@ header .info-wrap p {
 /* section hc about chb logic */
 
 
-#section-hc-radio-01:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(1) label,
-#section-hc-radio-02:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(2) label,
-#section-hc-radio-03:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(3) label,
-#section-hc-radio-04:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(4) label,
-#section-hc-radio-05:checked ~ .section-hc-about .section-wrap .section-nav-menu ul:nth-child(5) label{
+#section-hc-radio-01:checked ~ .section-hc-about .section-wrap .section-nav-menu ul li:nth-child(1) label,
+#section-hc-radio-02:checked ~ .section-hc-about .section-wrap .section-nav-menu ul li:nth-child(2) label,
+#section-hc-radio-03:checked ~ .section-hc-about .section-wrap .section-nav-menu ul li:nth-child(3) label,
+#section-hc-radio-04:checked ~ .section-hc-about .section-wrap .section-nav-menu ul li:nth-child(4) label,
+#section-hc-radio-05:checked ~ .section-hc-about .section-wrap .section-nav-menu ul li:nth-child(5) label{
     border-bottom: 1px solid var(--clr-primary-lightblue); 
 }
 
@@ -166,7 +166,7 @@ section+section .section-wrap {
     display: flex;
 }
 
-.section-nav-menu {
+.section-nav-menu ul {
     display: flex;
     gap: 0.75rem;
     width: 100%;

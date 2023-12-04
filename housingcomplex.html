@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="modal-agreement">
-                    <input type="checkbox" name="" id="modal-agreement-01" checked>
+                    <input type="checkbox" id="modal-agreement-01" checked>
                     <label for="modal-agreement-01">
                         Согласие на получение данных об акция, скидках, новых услугах и предложениях
                     </label>
@@ -100,7 +100,7 @@
         
                     <div class="drop-down">
                         <ul id="dropDownUl">
-                            <li><label for="header-about-list-toggle"><p>О компании</p><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
+                            <li><label for="header-about-list-toggle"><span>О компании</span><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
                             <li hidden><a href="#">Вопрос-ответ</a></li>
                             <li hidden><a href="#">Новости</a></li>
                             <li hidden><a href="#">Контакты</a></li>
@@ -110,7 +110,7 @@
 
                     <div class="drop-down drop-down-02">
                         <ul id="dropDownUl02">
-                            <li><label for="header-about-list-toggle02"><p>Жилая недвижимость</p><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
+                            <li><label for="header-about-list-toggle02"><span>Жилая недвижимость</span><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
                             <li hidden><a href="#">Коммерческая недвижимость</a></li>
                             <li hidden><a href="#">Машиноместа и кладовые</a></li>
                             <li hidden><a href="#">Автомойки</a> </li>
@@ -187,7 +187,7 @@
         </div>
 
         <div class="section-expert-estate-callback">
-            <span class="open-callback-modal" href="#"><img src="./img/icons/telephone.svg" alt=""></span>
+            <span class="open-callback-modal"><img src="./img/icons/telephone.svg" alt=""></span>
              <a href="#"><img src="./img/icons/hammer.svg" alt=""></a>
          </div>
 
@@ -245,11 +245,13 @@
 
                     <div class="grid-right">
                         <nav class="section-nav-menu carousel-wrap dragscroll">
-                            <ul><label for="section-hc-radio-01" href="">Описание</label></ul>
-                            <ul><label for="section-hc-radio-02" href="">Инфраструктура</label></ul>
-                            <ul style="display: none;" ><label  for="section-hc-radio-03" href="">Новости</label></ul>
-                            <ul><label for="section-hc-radio-04" href="">Документы</label></ul>
-                            <ul><label for="section-hc-radio-05" href="">Офис продаж</label></ul>
+                            <ul>
+                                <li><label for="section-hc-radio-01">Описание</label></li>
+                                <li><label for="section-hc-radio-02">Инфраструктура</label></li>
+                                <li style="display: none;"><label for="section-hc-radio-03">Новости</label></li>
+                                <li><label for="section-hc-radio-04">Документы</label></li>
+                                <li><label for="section-hc-radio-05">Офис продаж</label></li>
+                            </ul>
                         </nav>
                     </div>                
                 </div>
@@ -590,17 +592,13 @@
 
                 </div>
 
-                   
-
-            </div >
-
         </section>
 
         <section class="section-filter">
 
             <div class="section-wrap">
 
-                <h2>Квартиры</h2></h1>
+                <h2>Квартиры</h2>
 
                 <input type="radio" name="filter-view-radio" id="filter-view-toggle-card" checked>
                 <input type="radio" name="filter-view-radio" id="filter-view-toggle-table">
@@ -783,10 +781,10 @@
 
                         <img src="./img/filter/floor-plan-01.webp" alt="план этажа">
 
-                        <span class="price-promo-wrap">
+                        <div class="price-promo-wrap">
                             <span class="price">12 500 600 ₽</span>
-                            <div class="promo" active="true">Акция</div>
-                        </span>
+                            <div class="promo" data-promo="true">Акция</div>
+                        </div>
 
                         <div class="card-info-wrap">
                             <span>5-комнатная</span>
@@ -809,10 +807,10 @@
 
                         <img src="./img/filter/floor-plan-01.webp" alt="план этажа">
 
-                        <span class="price-promo-wrap">
+                        <div class="price-promo-wrap">
                             <span class="price">8 500 600 ₽</span>
-                            <div class="promo" active="false">Акция</div>
-                        </span>
+                            <div class="promo" data-promo="false">Акция</div>
+                        </div>
 
                         <div class="card-info-wrap">
                             <span>2-комнатная</span>
@@ -834,10 +832,10 @@
 
                         <img src="./img/filter/floor-plan-01.webp" alt="план этажа">
 
-                        <span class="price-promo-wrap">
+                        <div class="price-promo-wrap">
                             <span class="price">6 500 600 ₽</span>
-                            <div class="promo" active="true">Акция</div>
-                        </span>
+                            <div class="promo" data-promo="true">Акция</div>
+                        </div>
 
                         <div class="card-info-wrap">
                             <span>5-комнатная</span>
@@ -866,7 +864,7 @@
                             <div class="square">150,70 м2</div>
                             <div class="square-price">300 000</div>
                             <div class="price">6 500 600 ₽</div>
-                            <div class="promo" active="false">Акция</div>
+                            <div class="promo" data-promo="false">Акция</div>
 
 
                             <label class="expand-table-item-btn">
@@ -921,7 +919,7 @@
                             <div class="square">150,70 м2</div>
                             <div class="square-price">300 000</div>
                             <div class="price">12 500 600 ₽</div>
-                            <div class="promo" active="true">Акция</div>
+                            <div class="promo" data-promo="true">Акция</div>
 
                             <label class="expand-table-item-btn">
                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -976,7 +974,7 @@
                             <div class="square">150,70 м2</div>
                             <div class="square-price">300 000</div>
                             <div class="price">6 500 600 ₽</div>
-                            <div class="promo" active="true">Акция</div>
+                            <div class="promo" data-promo="true">Акция</div>
 
 
                             <label class="expand-table-item-btn">
@@ -1032,7 +1030,7 @@
                             <div class="square">150,70 м2</div>
                             <div class="square-price">300 000</div>
                             <div class="price">6 500 600 ₽</div>
-                            <div class="promo" active="false">Акция</div>
+                            <div class="promo" data-promo="false">Акция</div>
 
 
                             <label class="expand-table-item-btn">
@@ -2131,7 +2129,7 @@
                     </div>
 
                 
-                    <form action="action">
+                    <form action="action" name="callback" id="collbackForm">
                         <input type="text" class="btn" placeholder="Представьтесь">
                         <input type="tel" class="btn" placeholder="Телефон">
                         <input type="submit" class="btn btn-red" value="Жду звонок">

@@ -74,8 +74,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const rowViewChb = document.querySelector('#filter-view-toggle-table')
     const tileViewChb = document.querySelector('#filter-view-toggle-card')
 
-    console.log(window.innerWidth)
-
     visualViewport.onresize = () => {
       if(rowViewChb.checked && window.innerWidth < 900) {
         tileViewChb.click()
