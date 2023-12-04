@@ -208,6 +208,12 @@ button, .btn {
     color: var(--clr-greyscale-0);
 }
 
+.btn-white-light-blue {
+    background-color: var(--clr-greyscale-0);
+    color: var(--clr-primary-lightblue);
+    border: 1px solid var(--clr-primary-lightblue) !important;
+}
+
 .btn-blue {
     background-color: var(--clr-primary-blue);
     color: var(--clr-greyscale-0);

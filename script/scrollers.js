@@ -125,6 +125,39 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         }
     }
+    // SCROLLER TYPICAL LAYOUTS
+
+    var scrollerLayouts = document.querySelector('#carousel_layouts')
+
+    if (document.querySelector('#carousel_layouts_controls')) {
+        var scrollerLayoutscontrols = document.querySelector('#carousel_layouts_controls').children
+        scrollerLayouts.addEventListener('scroll', () => {
+            updateScrollerControls(scrollerLayouts, scrollerLayoutscontrols)
+        })
+
+        for (let i = 0; i < scrollerLayoutscontrols.length; i++) {
+            scrollerLayoutscontrols[i].addEventListener('click', () => {
+                clickScrollerControls(scrollerLayouts, scrollerLayoutscontrols, i)
+            })
+        }
+    }
+
+    // SCROLLER NEWS
+
+    var scrollerNews = document.querySelector('#carousel_news')
+
+    if (document.querySelector('#carousel_news_controls')) {
+        var scrollerNewscontrols = document.querySelector('#carousel_news_controls').children
+        scrollerNews.addEventListener('scroll', () => {
+            updateScrollerControls(scrollerNews, scrollerNewscontrols)
+        })
+
+        for (let i = 0; i < scrollerNewscontrols.length; i++) {
+            scrollerNewscontrols[i].addEventListener('click', () => {
+                clickScrollerControls(scrollerNews, scrollerNewscontrols, i)
+            })
+        }
+    }
 
     // scroller - id враппера со скролл эелементами
     // controls - id статус бара 

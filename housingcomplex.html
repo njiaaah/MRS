@@ -100,23 +100,23 @@
                     </a>
         
                     <div class="drop-down">
-                            <ul id="dropDownUl">
-                                <li><a href="#">О компании</a><label for="header-about-list-toggle"><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
-                                <li hidden><a href="#">Вопрос-ответ</a></li>
-                                <li hidden><a href="#">Новости</a></li>
-                                <li hidden><a href="#">Контакты</a></li>
-                            </ul>
-        
+                        <ul id="dropDownUl">
+                            <li><label for="header-about-list-toggle"><p>О компании</p><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
+                            <li hidden><a href="#">Вопрос-ответ</a></li>
+                            <li hidden><a href="#">Новости</a></li>
+                            <li hidden><a href="#">Контакты</a></li>
+                        </ul>
+    
                     </div>
 
                     <div class="drop-down drop-down-02">
                         <ul id="dropDownUl02">
-                            <li><a href="#">Жилая недвижимость</a><label for="header-about-list-toggle02"><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
+                            <li><label for="header-about-list-toggle02"><p>Жилая недвижимость</p><img src="./img/icons/header-arrow-down.svg" alt=""></label></li>
                             <li hidden><a href="#">Коммерческая недвижимость</a></li>
                             <li hidden><a href="#">Машиноместа и кладовые</a></li>
                             <li hidden><a href="#">Автомойки</a> </li>
                         </ul>
-    
+
                     </div>
         
                     <div class="info-wrap">
@@ -240,7 +240,7 @@
 
                 <!-- ALWAYS -->
 
-                <div class="section-hc-adress-official-combo order-2-720" >
+                <div class="section-hc-adress-official-combo order-2-720 order-5-320" >
 
                     <div class="section-hc-about-adress">
 
@@ -270,7 +270,7 @@
 
                 <!-- ALWAYS -->
 
-                <div class="row-2 section-hc-about-adress" style="grid-row-start: 2;">
+                <div class="row-2 section-hc-about-adress row-5-320" style="grid-row-start: 2;">
 
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="16" cy="16" r="16" fill="#16215B"/>
@@ -347,7 +347,7 @@
 
                 </div>
 
-                <div class="col-1-6 section-hc-about-tag-wrap flex ">
+                <div class="col-1-6 section-hc-about-tag-wrap flex order-5-320">
                     <span class="btn btn-light-grey">Окружение</span>
                     <span class="btn btn-light-grey">Расположение</span>
                     <span class="btn btn-light-grey">Архитектура</span>
@@ -501,7 +501,9 @@
                 <!-- RADIO 03 -->
                 <!-- news.css -->
 
-                    <div class="col-2-4 row-2 section-hc-news-carousel carousel-container hc-radio-03 order-3-720">
+                    <!-- news carousel -->
+
+                    <div class="col-2-4 news-list-view row-2 section-hc-news-carousel carousel-container hc-radio-03 order-3-720">
 
                         <div class="carousel-wrap dragscroll snapsinline" id="carousel_news">
 
@@ -640,6 +642,10 @@
                             </div>
     
                         </div>
+
+
+
+                        
         
                         <div class="carousel-controls" id="carousel_news_controls">
                             <span class="active-point"></span>
@@ -650,7 +656,58 @@
     
                     </div>
 
+                    <div class="order-3-720 news-list-view triple-news-card-wrap">
+                                
+                        <a href="#" class="news-card sneaky-hover">
+                            <span class="news-card-date">20 ноября</span>
+                            <h4 class="news-card-heading">Ипотека для IT-специалистов</h4>
+                        </a>
+                        <a href="#" class="news-card sneaky-hover">
+                            <span class="news-card-date">20 ноября</span>
+                            <h4 class="news-card-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, necessitatibus?</h4>
+                        </a>
+                        <a href="#" class="news-card sneaky-hover">
+                            <span class="news-card-date">20 ноября</span>
+                            <h4 class="news-card-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, necessitatibus?</h4>
+                        </a>
 
+                    </div>
+
+                    
+
+                    <!-- article body -->
+
+                    <div class="col-2-4 row-3 news-article news-arcticle-head hc-radio-03">
+
+                        <h2>Электронные торги недвижимостью — наша специализация </h2>
+
+                        <p>ЖК «Инноватор» — это две 28-этажных башни с подземным паркингом в запоминающемся архитектурном решении от известного бюро СПИЧ. </p>
+
+                    </div>
+
+                    <div class="col-2-4 row-4 carousel-container news-article news-arcticle-carousel hc-radio-03">
+
+                        <div class="carousel-wrap dragscroll snapsinline" id="carousel_article">
+                            <div><img src="./img//housing-complex/hc-img-1.webp" alt=""></div>
+                            <div><img src="./img//housing-complex/hc-img-1.webp" alt=""></div>
+                            <div><img src="./img//housing-complex/hc-img-1.webp" alt=""></div>
+                            <div><img src="./img//housing-complex/hc-img-1.webp" alt=""></div>
+                            <div><img src="./img//housing-complex/hc-img-1.webp" alt=""></div>
+                        </div>
+        
+                        <div class="carousel-controls" id="carousel_article_controls">
+                            <span class="active-point"></span>
+                            <span class=""></span>
+                            <span class=""></span>
+                            <span class=""></span>
+                        </div>
+    
+                    </div>
+
+                    <p class="col-2-4 row-5">Планировочные решения на любой запрос – от квартир-студий от 21 кв.м. до просторных 5-комнатных квартир до 137,8 кв. м. Панорамное остекление, живописные виды на город, развитая инфраструктура с закрытым внутренним двором на стилобатной части комплекса, где разместятся детские и спортивные площадки, зоны для уединенного отдыха, а также шаговая доступность до трех лесопарковых зон – выбор современного жителя. Вместительный подземный паркинг обеспечит сохранность любимого автомобиля, а кладовые комнаты – личных вещей и спортивного инвентаря.</p>
+
+                    <button class="btn btn-white-light-blue news-all-btn order-4-720 hc-radio-03 col-2-4 row-6"> Все новости</button>
+                    
 
                 </div>
 
@@ -663,6 +720,8 @@
         <section class="section-filter">
 
             <div class="section-wrap">
+
+                <h2>Квартиры</h2></h1>
 
                 <input type="radio" name="filter-view-radio" id="filter-view-toggle-card" checked>
                 <input type="radio" name="filter-view-radio" id="filter-view-toggle-table">
@@ -1163,7 +1222,7 @@
 
                 <div class="carousel-container" >
 
-                    <div class="carousel-wrap dragscroll snapsinline" id="carousel_005">
+                    <div class="carousel-wrap dragscroll snapsinline" id="carousel_layouts">
 
                         <div><img src="./img/housing-complex/layout-1.webp" alt=""></div>
                         <div><img class="scaleX-1" src="./img/housing-complex/layout-1.webp" alt=""></div>
@@ -1172,7 +1231,7 @@
                         <div><img src="./img/housing-complex/layout-1.webp" alt=""></div>
                     </div>
 
-                    <div class="carousel-controls" id="carousel_005_controls">
+                    <div class="carousel-controls" id="carousel_layouts_controls">
                         <span class="active-point"></span>
                         <span class=""></span>
                         <span class=""></span>

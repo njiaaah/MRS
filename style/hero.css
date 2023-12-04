@@ -177,13 +177,13 @@ section+section .section-wrap {
     grid-row-start: 3;
 }
 .row-4 {
-    grid-row-start: 3;
+    grid-row-start: 4;
 }
 .row-5 {
-    grid-row-start: 3;
+    grid-row-start: 5;
 }
 .row-6 {
-    grid-row-start: 3;
+    grid-row-start: 6;
 }
 
 .section-hero .col-2-4 .tag-wrap {
