@@ -80,6 +80,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
       }
     }
 
+    const labels = document.querySelectorAll('.filter-labels-to-swap')
+    const labelMain = document.querySelector('#labels-change-target')
+
+    labels.forEach(label => {
+        label.addEventListener('click',()=>{
+          labelMain.innerHTML = label.innerHTML
+          setTimeout(()=>{
+            if(document.querySelector('#mobile-filter-options-toggle').checked) {
+              document.querySelector('#mobile-filter-options-toggle').click()
+            }
+          },250)
+        })
+
+      
+    });
+
     
 
 

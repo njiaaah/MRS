@@ -752,7 +752,8 @@ white-space: nowrap;
     .section-filter .section-wrap {
         padding-inline: 1rem;
         margin-inline: 0.4375rem; 
-        width: 96.5%;  
+        width: 96.5%;
+        padding-block: 2.5rem;  
     }
 
     .room-select-container {
@@ -796,5 +797,11 @@ white-space: nowrap;
         display: grid;
         place-items: center;
         margin-top: 42px;
+    }
+
+    .section-filter .section-wrap h2 {
+        font-size: 1.75rem;
+        font-weight: 500;
+        line-height: 1.9375rem;
     }
 }

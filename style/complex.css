@@ -681,11 +681,8 @@ max-width: 44ch;
     justify-content: space-between;
 }
 
-.hc-radio-05 .section-hc-adress-official-combo .official-site-wrap{
-    transform: translateY(100px);
-}
 
-.hc-radio-01 .section-hc-adress-official-combo .official-site-wrap{
+.official-site-wrap {
     transform: translateY(125px);
 }
 
@@ -765,10 +762,17 @@ max-width: 44ch;
 
 @media screen and (max-width: 900px) {
 
+.official-site-wrap {
+    transform: translateY(0);
+    flex-wrap: nowrap;
+}
 
-    .documents-carousel .carousel-wrap {
-        --_height: 230px
-    }
+
+
+
+.documents-carousel .carousel-wrap {
+    --_height: 230px
+}
     
 
 .section-typical-layouts .carousel-container .carousel-wrap {
@@ -780,6 +784,10 @@ max-width: 44ch;
     padding-inline: 0;
 }
 
+.section-hero {
+    background-position: center;
+}
+
 .offices-grid {
     width: 100%;
 }
@@ -787,6 +795,9 @@ max-width: 44ch;
 .hc-radio-05 .section-hc-adress-official-combo .official-site-wrap ,
 .hc-radio-01 .section-hc-adress-official-combo .official-site-wrap {
     transform: translateY(0);
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.5625rem;
 }
 
 
@@ -877,7 +888,7 @@ max-width: 44ch;
 
 .section-hc-adress-official-combo {
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
     order: 1;
     margin-bottom: -2rem;
 }
@@ -969,6 +980,10 @@ max-width: 44ch;
 
 @media screen and (max-width: 560px) {
 
+    .radio-01-carousel {
+        margin-top: 4rem;
+    }
+
     .section-typical-layouts .carousel-container .carousel-wrap {
         --_height: clamp(13.125rem, -1.875rem + 75vw, 24.375rem);
     }
@@ -1009,7 +1024,7 @@ max-width: 44ch;
 
     .offices-grid .map-wrap {
         height: 328px;
-        margin-bottom: 180px;
+        margin-bottom: 205px;
     }
 
     .offices-upper-wrap .offices-adress{
@@ -1039,13 +1054,13 @@ max-width: 44ch;
     .offices-carousel .carousel-wrap {
         gap: .5rem;
         margin-top: 0rem;
-        --_height:148px;
+        --_height:176px;
     }
 
     .section-hero {
         height: 530px;
         background-image: url('../img/hero/hero.webp');
-        background-position: center;
+        background-position: 50% 50%;
     }
 
     .section-hero .section-wrap ,
@@ -1178,7 +1193,11 @@ max-width: 44ch;
 
     .section-typical-layouts .section-wrap {
         padding-inline: 1rem;
+        margin-bottom: -2rem;
+    }
 
+    .section-typical-layouts {
+        margin-top: 3.25rem;
     }
 
     .section-typical-layouts .carousel-container .carousel-wrap {
@@ -1192,6 +1211,11 @@ max-width: 44ch;
 
     .section-typical-layouts .carousel-container {
         margin-top: 2.4375rem;
+    }
+
+    .section-mortgage .section-wrap {
+        padding-top: 3.0625rem;
+        padding-bottom: 2rem;
     }
 
     .section-mortgage h2 {
@@ -1299,12 +1323,26 @@ max-width: 44ch;
         background-color: var(--clr-greyscale-2);
         border-radius: 12px;
         transform: translateY(-20px);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;    
+    
+    
+    
+    
+    
     }
 
     .infostructure-grid .section-hc-adress-official-combo,
     .documents-grid .section-hc-adress-official-combo{
         margin-top: 2rem;
         margin-bottom: 2rem;
+    }
+
+    .documents-grid {
+        margin-bottom: 2rem;
+    }
+
+    .official-site-wrap {
+        font-size: 0.875rem !important;
     }
 
     .description-content-wrap > span {
@@ -1365,7 +1403,9 @@ max-width: 44ch;
         transform: translateY(-50px);
     }
 
-
+    .offices-upper-wrap {
+        margin-top: -5rem;
+    }
     
     .offices-carousel {
         width: 92vw;
