@@ -1,0 +1,55 @@
+.company-wrap {
+    display: grid;
+    gap: 2rem;
+    margin: 0 4rem;
+    width: 74%;
+}
+
+.company-wrap h4 {
+    font-size: 1.2rem;
+    line-height: 25px;
+}
+
+.company-info-top-second h5 {
+    font-size: 1.2rem;
+    color: var(--clr-primary-darkblue) !important;
+}
+
+.company-info-top-first p {
+    color: var(--clr-greyscale-8);
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.company-wrap h5 {
+    color: var(--clr-primary-blue);
+    white-space: pre-line;
+    line-height: 27px;
+}
+
+.company-info-card {
+    border-radius: 16px;
+    background-color: var(--clr-greyscale-2);
+    display: grid;
+}
+
+.company-info-card div {
+    margin: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.company-info-top-first {
+    display: grid;
+    gap: 1rem;
+}
+
+.company-info-top-second {
+    display: grid;
+    gap: 1rem;
+}
+
+.company-info-top-second p {
+    font-size: 20px;
+    line-height: 25px;
+}
