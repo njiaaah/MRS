@@ -775,7 +775,7 @@ max-width: 44ch;
 }
 
 .infostructure-container .map-wrap {
-    max-width: 100%;
+    max-width: 97.5%;
 }
 
 #section-hc-radio-01:not(:checked) ~ .section-hc-about .section-wrap .section-hc-adress-official-combo {
@@ -952,6 +952,19 @@ max-width: 44ch;
     .right-side-controls span {
         width: 48px;
         aspect-ratio: 1;
+    }
+
+    #section-hc-radio-05:checked ~ .section-hc-about .section-wrap .section-hc-adress-official-combo {
+        margin-top: 0rem;
+    }
+
+    .offices-adress {
+        width: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    }
+
+    .infostructure-container {
+        margin-top: -3.5rem;
     }
 
     .section-nav-menu .carousel-wrap {
