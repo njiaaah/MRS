@@ -151,6 +151,7 @@ h5 {
 
 .carousel-wrap > img {
     max-height: calc( var(--_height) - 20px);
+    min-width: 100px;
     /* max-height: calc(100%); */
     aspect-ratio: 1.777;
     object-fit: cover;
