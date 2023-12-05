@@ -85,6 +85,7 @@
       .contacts-info-top-label + .contacts-info-top-input + .contacts-info-top-label {
         max-height: 40px;
         border-top-width: 1px;
+        padding-left: 0.8rem;
       }
     }
 }
@@ -156,6 +157,7 @@
       line-height: 15px;
       text-align: left;
       color: var(--clr-greyscale-6);
+      padding-left: 0.8rem;
 }
 
 .contacts-info-main-top-button {
@@ -296,6 +298,7 @@
 
     .contacts-info-top-label {
         font-size: 0.8rem;
+        padding-left: 0.8rem;
     }
 
     .contacts-info-top-menu {

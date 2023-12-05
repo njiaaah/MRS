@@ -20,7 +20,7 @@
     color: var(--clr-primary-darkblue) !important;
 }
 
-.company-info-top-first p {
+.company-info-top-first p, .company-info-card p {
     color: var(--clr-greyscale-8);
     line-height: 20px;
     font-size: 16px;
@@ -114,8 +114,8 @@
 }
 
 .company-achievement {
-    padding: 3rem 2rem 4rem 2rem;
-    margin: 0 auto 3rem auto;
+    padding: 3rem 2rem 2rem 2rem;
+    margin: 0 auto;
     display: grid;
     width: var(--content-width);
 }
@@ -272,5 +272,17 @@
 
     .company-achievement-wrap {
         padding-left: 0.5rem;
+    }
+
+    .company-achievement-item svg {
+        filter: invert(40%) sepia(91%) saturate(2853%) hue-rotate(334deg) brightness(99%) contrast(106%);
+    }
+
+    .company-achievement-item div h5 {
+        color: var(--clr-secondary-red);
+    }
+
+    .company-achievement-item p {
+        color: var(--clr-primary-blue);
     }
 }
