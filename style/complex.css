@@ -398,6 +398,10 @@ max-width: 44ch;
     width: 100%;
 }
 
+.section-typical-layouts .carousel-container .carousel-wrap {
+    --_height: clamp(37.5rem, 0.4934rem + 65.7895vw, 53.125rem);
+}
+
 
 
 #carousel_003_side_controls_prev,
@@ -681,7 +685,8 @@ max-width: 44ch;
 }
 
 .offices-carousel .carousel-wrap {
-    width: 100%;
+    --_height: 270px;
+    gap: .5rem;
 }
 
 .offices-carousel {
@@ -754,6 +759,10 @@ max-width: 44ch;
 
 
 @media screen and (max-width: 900px) {
+
+.section-typical-layouts .carousel-container .carousel-wrap {
+    --_height: clamp(24.375rem, 2.7574rem + 61.7647vw, 37.5rem);
+}
 
     .section-hero .section-wrap ,
 .section-hc-about .section-wrap {
@@ -949,6 +958,10 @@ max-width: 44ch;
 
 @media screen and (max-width: 560px) {
 
+    .section-typical-layouts .carousel-container .carousel-wrap {
+        --_height: clamp(13.125rem, -1.875rem + 75vw, 24.375rem);
+    }
+
     .right-side-controls span {
         width: 48px;
         aspect-ratio: 1;
@@ -1090,6 +1103,10 @@ max-width: 44ch;
     #carousel_003_side_controls_prev,
     #carousel_003_side_controls_next {
         display: none;
+    }
+
+    .radio-01-carousel .carousel-wrap {
+        --_height: 148px;
     }
 
     .radio-01-carousel .carousel-wrap div img {
