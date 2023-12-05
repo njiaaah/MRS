@@ -141,23 +141,41 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         }
     }
+    
+    // SCROLLER HC DOCS
 
-    // SCROLLER NEWS
+    var scrollerDocs = document.querySelector('#carousel_docs')
 
-    var scrollerNews = document.querySelector('#carousel_news')
-
-    if (document.querySelector('#carousel_news_controls')) {
-        var scrollerNewscontrols = document.querySelector('#carousel_news_controls').children
-        scrollerNews.addEventListener('scroll', () => {
-            updateScrollerControls(scrollerNews, scrollerNewscontrols)
+    if (document.querySelector('#carousel_docs_controls')) {
+        var scrollerDocscontrols = document.querySelector('#carousel_docs_controls').children
+        scrollerDocs.addEventListener('scroll', () => {
+            updateScrollerControls(scrollerDocs, scrollerDocscontrols)
         })
 
-        for (let i = 0; i < scrollerNewscontrols.length; i++) {
-            scrollerNewscontrols[i].addEventListener('click', () => {
-                clickScrollerControls(scrollerNews, scrollerNewscontrols, i)
+        for (let i = 0; i < scrollerLayoutscontrols.length; i++) {
+            scrollerDocscontrols[i].addEventListener('click', () => {
+                clickScrollerControls(scrollerDocs, scrollerDocscontrols, i)
             })
         }
     }
+
+    // SCROLLER HC OFFICES
+
+    var scrollerOffices = document.querySelector('#carousel_offices')
+
+    if (document.querySelector('#carousel_offices_controls')) {
+        var scrollerOfficescontrols = document.querySelector('#carousel_offices_controls').children
+        scrollerOffices.addEventListener('scroll', () => {
+            updateScrollerControls(scrollerOffices, scrollerOfficescontrols)
+        })
+
+        for (let i = 0; i < scrollerLayoutscontrols.length; i++) {
+            scrollerOfficescontrols[i].addEventListener('click', () => {
+                clickScrollerControls(scrollerOffices, scrollerOfficescontrols, i)
+            })
+        }
+    }
+
 
     // scroller - id враппера со скролл эелементами
     // controls - id статус бара 
