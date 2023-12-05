@@ -235,6 +235,11 @@ section+section .section-wrap {
     display: none;
 }
 
+.documents-carousel .carousel-wrap {
+    --_height: 350px
+}
+
+
 .right-side-controls {
     position: fixed;
     right: 0;
@@ -759,6 +764,12 @@ max-width: 44ch;
 
 
 @media screen and (max-width: 900px) {
+
+
+    .documents-carousel .carousel-wrap {
+        --_height: 230px
+    }
+    
 
 .section-typical-layouts .carousel-container .carousel-wrap {
     --_height: clamp(24.375rem, 2.7574rem + 61.7647vw, 37.5rem);
