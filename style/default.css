@@ -141,6 +141,7 @@ h5 {
     display: flex;
     width: 100%;
     padding-bottom: 1.75rem;
+    overflow-y: hidden;
 }
 
 .carousel-wrap > div {
@@ -151,7 +152,6 @@ h5 {
 
 .carousel-wrap > img {
     max-height: calc( var(--_height) - 20px);
-    min-width: 100px;
     /* max-height: calc(100%); */
     aspect-ratio: 1.777;
     object-fit: cover;
