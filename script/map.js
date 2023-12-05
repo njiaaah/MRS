@@ -21,7 +21,7 @@ function init() {
       balloonContent: 'ЖК МОСРЕАЛСТРОЙ'
     }, {
       iconLayout: "default#image",
-      iconImageHref: "../img/icons/mrs-marker.svg",
+      iconImageHref: "./img/icons/mrs-marker.svg",
       iconImageSize: [40, 40],
       iconImageOffset: [0, -35]
     });
