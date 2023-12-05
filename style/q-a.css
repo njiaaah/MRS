@@ -123,3 +123,11 @@
         margin-left: 0;
     }
 }
+
+@media screen and (max-width: 560px) {
+
+    .q-a h2 {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+}

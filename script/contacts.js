@@ -1,3 +1,5 @@
+if (document.querySelector('.contacts-info-top-select')) {
+
 const selectSingle = document.querySelector('.contacts-info-top-select');
 const selectSingle_title = selectSingle.querySelector('.contacts-info-top-title');
 const selectSingle_labels = selectSingle.querySelectorAll('.contacts-info-top-label');
@@ -17,4 +19,5 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle_title.textContent = evt.target.textContent;
     selectSingle.setAttribute('data-state', '');
   });
+}
 }

@@ -125,6 +125,41 @@ document.addEventListener('DOMContentLoaded', ()=>{
             })
         }
     }
+
+    // SCROLLER CONTACT-PARTNER
+
+    var scroller06 = document.querySelector('.company-partners-container')
+
+    if (document.querySelector('#carousel-company-partners')) {
+        var scroller06controls = document.querySelector('#carousel-company-partners').children
+        scroller06.addEventListener('scroll', () => {
+            updateScrollerControls(scroller06, scroller06controls)
+        })
+
+        for (let i = 0; i < scroller06controls.length; i++) {
+            scroller06controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller06, scroller06controls, i)
+            })
+        }
+    }
+
+    // SCROLLER CONTACT-achievement
+
+    var scroller07 = document.querySelector('.company-achievement-container')
+
+    if (document.querySelector('#carousel-company-achievement')) {
+        var scroller07controls = document.querySelector('#carousel-company-achievement').children
+        scroller07.addEventListener('scroll', () => {
+            updateScrollerControls(scroller07, scroller07controls)
+        })
+
+        for (let i = 0; i < scroller06controls.length; i++) {
+            scroller07controls[i].addEventListener('click', () => {
+                clickScrollerControls(scroller07, scroller07controls, i)
+            })
+        }
+    }
+
     // SCROLLER TYPICAL LAYOUTS
 
     var scrollerLayouts = document.querySelector('#carousel_layouts')
