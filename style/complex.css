@@ -292,7 +292,7 @@ section+section .section-wrap {
 
 .section-nav-menu {
     height: 100px;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
 }
 
 .section-nav-menu .carousel-wrap {
