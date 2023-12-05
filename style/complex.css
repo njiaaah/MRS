@@ -1009,7 +1009,7 @@ max-width: 44ch;
 
     .offices-grid .map-wrap {
         height: 328px;
-        margin-bottom: 300px;
+        margin-bottom: 180px;
     }
 
     .offices-upper-wrap .offices-adress{
@@ -1039,6 +1039,7 @@ max-width: 44ch;
     .offices-carousel .carousel-wrap {
         gap: .5rem;
         margin-top: 0rem;
+        --_height:148px;
     }
 
     .section-hero {
