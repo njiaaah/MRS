@@ -1009,7 +1009,7 @@ max-width: 44ch;
 
     .offices-grid .map-wrap {
         height: 328px;
-        margin-bottom: 200px;
+        margin-bottom: 300px;
     }
 
     .offices-upper-wrap .offices-adress{
@@ -1038,11 +1038,7 @@ max-width: 44ch;
 
     .offices-carousel .carousel-wrap {
         gap: .5rem;
-    }
-
-    .offices-carousel img {
-        height: 184px;
-        height: 148px;
+        margin-top: 0rem;
     }
 
     .section-hero {
@@ -1118,11 +1114,6 @@ max-width: 44ch;
 
     .radio-01-carousel .carousel-wrap {
         --_height: 148px;
-    }
-
-    .radio-01-carousel .carousel-wrap div img {
-        width: 264px;
-        height: 148px;
     }
 
 
