@@ -13,6 +13,7 @@
 .contacts-map {
     background-color: var(--clr-greyscale-2);
     border-radius: 24px;
+    overflow: hidden;
 }
 
 .contacts-info {
@@ -42,7 +43,7 @@
 }
 
 .contacts-info-top-menu {
-    display: flex;
+    display: none;
     justify-content: space-between;
     margin-top: 2rem;
     position: relative;
@@ -166,6 +167,7 @@
     border: 1px solid var(--clr-primary-lightblue);
     color: var(--clr-primary-lightblue);
     cursor: pointer;
+    display: none;
 }
 
 .contacts-info-main-bottom {
@@ -252,7 +254,7 @@
     }
 
     .contacts-info-top-menu {
-        display: grid;
+        display: none;
     }
 }
 
@@ -302,7 +304,7 @@
     }
 
     .contacts-info-top-menu {
-        display: grid;
+        display: none;
     }
 
     .contacts-info-main-top-button {
