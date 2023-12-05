@@ -121,11 +121,11 @@ h5 {
 .carousel-container {
     width: 100%;
     position: relative;
-    overflow: scroll;
     margin-bottom: 17px;
     scrollbar-width: 0;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    overflow: hidden;
 }
 
 .carousel-container::-webkit-scrollbar ,
@@ -137,24 +137,21 @@ h5 {
 .carousel-wrap {
     --_height: 280px;
     height: calc( var(--_height));
-    overflow: scroll;
     display: flex;
     width: 100%;
     padding-bottom: 1.75rem;
-    overflow-y: hidden;
+    overflow-x: scroll;
+    overflow-x:scroll;
 }
 
 .carousel-wrap > div {
-    height: calc( var(--_height) - 20px);
+    height: 100%;
     object-fit: cover;
     display: flex;
 }
 
 .carousel-wrap > img {
-    max-height: calc( var(--_height) - 20px);
-    /* max-height: calc(100%); */
-    aspect-ratio: 1.777;
-    object-fit: cover;
+    /* тимур молодец */
 }
 
 .carousel-controls {
