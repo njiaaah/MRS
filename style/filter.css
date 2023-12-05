@@ -305,10 +305,17 @@ color: var(--clr-greyscale-4);
 }
 
 .view-controls-center {
-    gap: 2rem;
+    gap: 2.7rem;
+    gap: 1rem;
+    gap: clamp(1rem, -6.004rem + 10.88vw, 2.7rem);
     display: flex;
-    margin-left: 20px;
+    margin-left: 3rem;
 
+}
+
+.view-controls-center > label:nth-of-type() {
+
+    outline: 2px solid red;
 }
 
 .filter-adress-toggle-wrap input:checked + label ,
@@ -347,6 +354,10 @@ color: var(--clr-greyscale-4);
     white-space: nowrap;
     text-align: left;
     width: 100%;
+}
+
+.filter-table-item-head > div:nth-child(2) {
+    width: 4ch;
 }
 
 .filter-table-item-head div {

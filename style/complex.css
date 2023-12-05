@@ -40,6 +40,11 @@ header .info-wrap p {
     grid-column-end: 3 ;
 }
 
+.infostructure-container,.documents-content-wrap span a {
+    color: var(--clr-primary-lightblue);
+    text-decoration: none;
+}
+
 
 
 
@@ -287,6 +292,11 @@ section+section .section-wrap {
 
 .section-nav-menu {
     height: 100px;
+    /* overflow-y: hidden; */
+}
+
+.section-nav-menu .carousel-wrap {
+    width: 70%;
 }
 
 .section-nav-menu ul {
@@ -603,6 +613,8 @@ max-width: 44ch;
 
 
 
+
+
 .mortgage-addon-item > *, .mortgage-addon-head>* {
     display: block;
     text-align: left;
@@ -656,7 +668,8 @@ max-width: 44ch;
 
 .offices-upper-wrap {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    justify-content: space-between;
 }
 
 .hc-radio-05 .section-hc-adress-official-combo .official-site-wrap{
@@ -722,7 +735,11 @@ max-width: 44ch;
 
 
 
-
+@media screen and (max-width: 1145px) {
+    .offices-adress {
+        gap: 1rem;
+    }
+}
 
 
 
@@ -744,7 +761,7 @@ max-width: 44ch;
 }
 
 .offices-grid {
-    width: 97%;
+    width: 100%;
 }
 
 .hc-radio-05 .section-hc-adress-official-combo .official-site-wrap ,
@@ -937,6 +954,10 @@ max-width: 44ch;
         aspect-ratio: 1;
     }
 
+    .section-nav-menu .carousel-wrap {
+        width: 100%;
+    }
+
     .section-nav-menu ul {
         width: 120%;
     }
@@ -1050,6 +1071,7 @@ max-width: 44ch;
 
     .section-hc-adress-official-combo {
         gap: 1rem;
+        margin-top: -5rem;
     }
 
     #carousel_003_side_controls_prev,
@@ -1309,6 +1331,8 @@ max-width: 44ch;
     .infostructure-container,.documents-content-wrap {
         transform: translateY(-50px);
     }
+
+
     
     .offices-carousel {
         width: 92vw;
