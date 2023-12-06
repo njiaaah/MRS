@@ -236,7 +236,6 @@ header .info-wrap p {
     width: 10ch;
     text-align: right;
     white-space: nowrap;
-    transform: translateX(-3ch);
 }
 
 .bank-info {
@@ -639,6 +638,7 @@ max-width: 44ch;
     padding-right: 2rem;
     position: relative;
     border-right: 1px solid var(--clr-greyscale-4);
+    padding-top: -2rem;
 }
 
 .mortgage-table-item-addon::-webkit-scrollbar {
@@ -684,11 +684,11 @@ max-width: 44ch;
 
 .bank-info > span:nth-child(2)::before {
     content: 'от';
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .mortgage-addon-head>*:nth-child(2) {
-    transform: translateX(100%);
+    transform: translateX(130%);
 }
 
 
@@ -1054,7 +1054,9 @@ max-width: 44ch;
 
 @media screen and (max-width: 560px) {
 
-
+    .bank-info > span:nth-child(2) {
+        text-align: center;
+    }
     
 
     .radio-01-carousel {
