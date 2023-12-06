@@ -211,6 +211,40 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
     }
 
+        //SCROLLER NEWS-TEXT
+
+        var scrollerNews = document.querySelector('#carousel_news')
+
+        if (document.querySelector('#carousel_news_controls')) {
+            var scrollerNewscontrols = document.querySelector('#carousel_news_controls').children
+            scrollerNews.addEventListener('scroll', () => {
+                updateScrollerControls(scrollerNews, scrollerNewscontrols)
+            })
+    
+            for (let i = 0; i < scrollerNewscontrols.length; i++) {
+                scrollerNewscontrols[i].addEventListener('click', () => {
+                    clickScrollerControls(scrollerNews, scrollerNewscontrols, i)
+                })
+            }
+            const scrollNewsPrev = document.querySelector('#carousel_news_side_controls_prev')
+            const scrollNewsNext = document.querySelector('#carousel_news_side_controls_next')
+    
+            scrollNewsPrev.addEventListener('click', ()=>{
+                let offsetLeft = scrollerNews.scrollLeft - (scrollerNews.children[0].clientWidth + 16)
+                scrollerNews.scrollTo ({
+                    left: offsetLeft,
+                    behavior: 'smooth'
+                })
+            })
+            scrollNewsNext.addEventListener('click', ()=>{
+                let offsetLeft = scrollerNews.scrollLeft + (scrollerNews.children[0].clientWidth + 16)
+                scrollerNews.scrollTo ({
+                    left: offsetLeft,
+                    behavior: 'smooth'
+                })
+            })
+        }
+
 
     // scroller - id враппера со скролл эелементами
     // controls - id статус бара 
