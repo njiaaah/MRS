@@ -3,6 +3,11 @@
     gap: 2rem;
 }
 
+.header-wrap {
+    position: static;
+    transform: translate(0,0);
+}
+
 .company-wrap h2 {
     margin: 0 2rem;
 }
