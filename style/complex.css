@@ -226,10 +226,23 @@ header .info-wrap p {
     flex-direction: column;
 }
 
+.bank-contact > span {
+    max-width: 30ch;
+    text-align: left;
+    text-wrap: balance;
+}
 
 .bank-info {
     display: flex;
     justify-content: space-between;
+}
+
+.no-before::before {
+    display: none;
+}
+
+.bank-info > span:first-child {
+    width: 12ch;
 }
 
 .bank-contact {
@@ -668,7 +681,7 @@ max-width: 44ch;
 }
 
 .mortgage-addon-head>*:nth-child(2) {
-    transform: translateX(40%);
+    transform: translateX(100%);
 }
 
 
@@ -809,6 +822,12 @@ max-width: 44ch;
 
 
 @media screen and (max-width: 900px) {
+
+    
+.mortgage-addon-head>*:nth-child(2) {
+    transform: translateX(75%);
+}
+
 
 .official-site-wrap {
     transform: translateY(0);
@@ -1027,6 +1046,9 @@ max-width: 44ch;
 
 
 @media screen and (max-width: 560px) {
+
+
+    
 
     .radio-01-carousel {
         margin-top: 4rem;
@@ -1319,7 +1341,7 @@ max-width: 44ch;
     .mortgage-addon-head>*:nth-child(2) {
         display: flex;
         place-items: center;
-        transform: translateX(15%);
+        transform: translateX(70%);
     }
 
     body {
