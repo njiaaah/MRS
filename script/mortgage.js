@@ -14,15 +14,29 @@ function generateMortgageTable(programs) {
         const displayRate = typeof bank.rate === 'string' ? bank.rate : rateValue;
         const rateClass = typeof bank.rate === 'string' ? 'no-before' : '';
     
-        return `
+        const bankInfo = `
           <div class="mortgage-addon-item">
             <div class="bank-info">
               <span>${bank.name}</span>
               <span class="${rateClass}">${displayRate}</span>
               <span>${bank.fee}</span>
             </div>
+        `;
+    
+        const bankContacts = bank.contacts.map(contact => `
+          <div class="bank-contact">
+            <span>${contact.name}</span>
+            ${contact.phone ? `<a href="tel:${contact.phone}">${contact.phone}</a>` : ''}
+          </div>
+        `).join('');
+    
+        const bankItem = `
+          ${bankInfo}
+          ${bankContacts}
           </div>
         `;
+    
+        return bankItem;
       }).join('');
     };
 
