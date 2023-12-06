@@ -192,6 +192,12 @@
     display: none;
 }
 
+.documents-content-wrap {
+    width: var(--content-width);
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
 @media screen and (max-width: 720px) {
 
     .company-wrap h2 {
@@ -244,10 +250,21 @@
         padding-right: 0;
     }
 
-    footer::before {
-        background-color: var(--clr-greyscale-2);
+    .documents-content-wrap {
+        transform: none !important;
+        margin-top: 2rem;
+        padding-left: 0;
     }
 
+
+}
+
+@media screen and (max-width: 560px) {
+
+    .documents-content-wrap {
+        transform: none !important;
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 687px) {
