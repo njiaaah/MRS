@@ -242,6 +242,7 @@ input[type="submit"] {
     position: relative;
     border: 1px solid var(--clr-primary-darkblue);
     padding-left: 20px;
+    padding-right: 50px;
 }
 
 .footer-main-right input+svg {
