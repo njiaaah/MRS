@@ -669,6 +669,10 @@ max-width: 44ch;
     padding-block: 1.4375rem 1rem;
 }
 
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
 .mortgage-addon-item,
 .mortgage-addon-head {
     display: flex;
