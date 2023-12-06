@@ -70,9 +70,16 @@
     transition: 0.2s ease;
 }
 
-.q-a-addon p {
+.q-a-addon {
+    margin-bottom: 3rem;
+}
+
+.q-a-addon b {
+    font-weight: bold;
+}
+
+.q-a-addon p, .q-a-addon li {
     white-space: pre-line;
-    margin-bottom: 5rem;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
