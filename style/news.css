@@ -159,7 +159,7 @@ input[type=radio] {
     margin-top: 2rem;
 }
 
-.news-text-button a {
+.news-text-button  {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
