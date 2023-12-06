@@ -222,6 +222,42 @@ header .info-wrap p {
     text-transform: uppercase;
 }
 
+.mortgage-addon-item {
+    flex-direction: column;
+}
+
+
+.bank-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bank-contact {
+    display: flex;
+    justify-content: left;
+    column-gap: 10px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+.bank-info > span:nth-child(2)::after {
+    content: '%';
+}
+
+.bank-info > span:nth-child(3)::before {
+    content: 'от';
+    padding-right: 10px;
+}
+
+.bank-info > span:nth-child(3)::after {
+    content: '%';
+}
+
+.bank-contact a {
+    color: gray;
+}
+
 
 
 
@@ -621,13 +657,25 @@ max-width: 44ch;
 }
 
 
-
-
-
-.mortgage-addon-item > *, .mortgage-addon-head>* {
-    display: block;
+.mortgage-addon-item > * {
     text-align: left;
     width: 100%;
+}
+
+.bank-info > span:nth-child(2)::before {
+    content: 'от';
+    padding-right: 10px;
+}
+
+.mortgage-addon-head>*:nth-child(2) {
+    transform: translateX(40%);
+}
+
+
+
+ .mortgage-addon-head>* {
+    display: block;
+    text-align: left;
 }
 
 .mortgage-addon-head>* {
