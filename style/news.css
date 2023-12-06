@@ -59,6 +59,11 @@ input[type=radio] {
     flex-direction: column;
     padding: 2rem;
     justify-content: space-between;
+    cursor: pointer;
+}
+
+.news-container a {
+    text-decoration: none;
 }
 
 .news-item span:first-of-type {
