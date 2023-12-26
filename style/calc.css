@@ -340,7 +340,6 @@ ul {
     width: 16rem;
     margin: 2.5rem 0 1rem 1rem;
     cursor: pointer;
-    padding: 15px 0;
     position: relative;
     z-index: 1;
 }
@@ -362,6 +361,10 @@ ul {
     margin-inline: 25px ;
     border-top: 1px solid var(--clr-greyscale-0);
     color: var(--clr-greyscale-8);
+}
+.calc-sort-label {
+    width: 100%;
+    padding: 12px 0;
 }
 
 .calc-img-sort {
