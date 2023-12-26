@@ -100,6 +100,14 @@ body {
 
 }
 
+h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.3125rem;
+    color: var(--clr-primary-darkblue);
+    margin-bottom: 2rem;
+}
+
 ul {
     list-style-type: none;
 }
@@ -156,8 +164,9 @@ ul {
     cursor: pointer;
 }
 
-#calc-all-programms-arrow {
-    transform: rotate(180deg);
+
+
+#calc-all-programms-arrow, .calc-img-sort-img {
     transition: transform 250ms ease-in-out;
 }
 
@@ -286,6 +295,9 @@ ul {
     margin-top: 3rem;
 }
 
+.rotated {
+    transform: rotate(180deg);
+}
 
 /* calc info */
 
@@ -314,6 +326,7 @@ ul {
     color: var(--clr-greyscale-8);
 }
 
+
 .calc-info-sort {
     display: flex;
     justify-content: space-between;
@@ -323,9 +336,32 @@ ul {
     letter-spacing: 0em;
     text-align: left;
     color: var(--clr-primary-darkblue);
-    width: 12rem;
+    /* width: 12rem; */
+    width: 16rem;
     margin: 2.5rem 0 1rem 1rem;
     cursor: pointer;
+    padding: 15px 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.calc-sort-list {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(100%);
+    background-color: var(--clr-greyscale-2);
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.calc-sort-list li {
+    padding: 12px 0;
+    margin-inline: 25px ;
+    border-top: 1px solid var(--clr-greyscale-0);
+    color: var(--clr-greyscale-8);
 }
 
 .calc-img-sort {
@@ -336,6 +372,7 @@ ul {
 .calc-info-sort-label {
     display: flex;
     place-items: center;
+    width: 256px;
     gap: 1rem;
 }
 

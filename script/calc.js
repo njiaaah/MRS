@@ -57,20 +57,38 @@ document.addEventListener('DOMContentLoaded', ()=>{
     // all programms dropdown
 
     const allProgrammsBtn = document.querySelector('.calc-button-programms')
-    const allProgrammsDd = document.querySelector('#calc-programms-drop-down')
     const programmsList = document.querySelectorAll('.program-name')
 
-    
+    let degrees = 0
 
     $('.calc-button-programms').on('click', ()=>{
         $('#calc-programms-drop-down').slideToggle(250)
+        $('#calc-all-programms-arrow').toggleClass('rotated')
     })
 
     for (let i = 0; i < programmsList.length; i++) {
         programmsList[i].addEventListener('click', (e)=>{
             allProgrammsBtn.innerHTML = programmsList[i].innerHTML + '<img id="calc-all-programms-arrow" src="img/calc/arrow.svg" alt="">'
             $('#calc-programms-drop-down').slideToggle(250)
+            $('#calc-all-programms-arrow').toggleClass('rotated')
+            
         })
         
+    }
+
+    // sort
+
+    $('.calc-sort-label').on('click', ()=>{
+        toggleSort()
+    })
+
+    $('.calc-img-sort-img').on('click', ()=>{
+        toggleSort()
+    })
+
+    function toggleSort() {
+        console.log('sorted')
+        $('.calc-sort-list').slideToggle(250)
+        $('.calc-img-sort-img').toggleClass('rotated')
     }
 })
