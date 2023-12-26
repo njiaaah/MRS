@@ -52,4 +52,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
     sliderInit('calc01','calc01-lower', 'calc01-upper', 1000000, 50000000, 1000000, 10000000, 1 )
     sliderInit('calc02','calc02-lower', 'calc02-upper', 1000000, 10000000, 1000000, 2500000, 1)
     sliderInit('calc03','calc03-lower', 'calc03-upper', 1, 50, 1, 15, 1 )
+
+
+    // all programms dropdown
+
+    const allProgrammsBtn = document.querySelector('.calc-button-programms')
+    const allProgrammsDd = document.querySelector('#calc-programms-drop-down')
+    const programmsList = document.querySelectorAll('.program-name')
+
+    
+
+    $('.calc-button-programms').on('click', ()=>{
+        $('#calc-programms-drop-down').slideToggle(250)
+    })
+
+    for (let i = 0; i < programmsList.length; i++) {
+        programmsList[i].addEventListener('click', (e)=>{
+            allProgrammsBtn.innerHTML = programmsList[i].innerHTML + '<img id="calc-all-programms-arrow" src="img/calc/arrow.svg" alt="">'
+            $('#calc-programms-drop-down').slideToggle(250)
+        })
+        
+    }
 })
