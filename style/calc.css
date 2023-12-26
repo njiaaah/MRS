@@ -100,6 +100,12 @@ body {
 
 }
 
+@media screen and (max-width: 720px) {
+    body {
+        --content-width: clamp(var(--content-width-320), 1.536rem + 87.32vw, var(--content-width-720));
+    }
+}
+
 h2 {
     font-size: 3rem;
     font-weight: 500;
@@ -111,10 +117,11 @@ h2 {
 ul {
     list-style-type: none;
 }
+
 .calc {
     display: grid;
     width: var(--content-width);
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
 }
 
 .calc-wrap {
@@ -123,11 +130,17 @@ ul {
     gap: 1rem;
 }
 
+.calc-input {
+    display: grid;
+    height: fit-content;
+}
+
 .calc-input-wrap {
     display: grid;
     margin-top: 2rem;
     gap: 1rem;
     place-items: center;
+    height: fit-content;
 }
 
 .calc-programms-wrap {
@@ -215,7 +228,7 @@ ul {
 }
 
 .noUi-target {
-    --_slider-inner-width: 93%;
+    --_slider-inner-width: clamp(10.5rem, -2.167rem + 26.459vw, 19rem);
     padding-inline: 1px;
     position: relative;
     bottom: 0;
@@ -290,9 +303,21 @@ ul {
     background-color: var(--clr-primary-lightblue);
     border-radius: 48px;
     border: none;
-    width: 60%;
+    width: 13rem;
     cursor: pointer;
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
+    white-space: nowrap;
+
+}
+
+.calc-info-last {
+    display: flex;
+    justify-content: space-between;
+    width: clamp(6rem, -4.318rem + 22.898vw, 14rem);
+}
+
+.calc-info-bank {
+    width: 7.5rem;
 }
 
 .rotated {
@@ -310,20 +335,21 @@ ul {
 }
 
 .calc-info-container {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     gap: 1.5rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: var(--clr-greyscale-0);
     border-radius: 16px;
     height: 4rem;
-    place-content: center;
+    place-items: center;
     padding: 0 1rem;
-    font-size: 16px;
+    font-size: clamp(0.75rem, 0.428rem + 0.716vw, 1rem);
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
     color: var(--clr-greyscale-8);
+    white-space: nowrap;
 }
 
 
@@ -395,8 +421,117 @@ ul {
     position: absolute;
 }
 
+.calc-info-proc::after {
+    content: '%';
+}
+
 .calc-info-years::after {
     content: 'лет';
-    left: 2.3rem;
-    position: absolute;
+    margin-left: 0.5rem;
+}
+
+.calc-price {
+    width: 8.5rem;
+}
+
+.calc-price::after {
+    content: 'руб./мес.';
+    margin-left: 0.2rem;
+}
+
+@media screen and (max-width: 765px) {
+
+    .calc-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-input {
+        margin-bottom: 3rem;
+    }
+    
+    .calc-input-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .calc-input-button-confirm {
+        width: 100%;
+    }
+
+    .noUi-base {
+        width: clamp(13rem, -2.172rem + 43.27vw, 17.3rem);
+    }
+}
+
+@media screen and (max-width: 560px) {
+
+    .calc-input-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-info-container {
+        flex-direction: column;
+        height: fit-content;
+        place-items: normal;
+        gap: 0;
+    }
+
+    .calc-info-bank {
+        border-bottom: 1px solid var(--clr-greyscale-2);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .calc-price {
+        margin-left: 0.5rem;
+    }
+
+    .calc-info-price::before {
+        position: relative;
+    }
+
+    .calc-info-last {
+        margin-left: 1.3rem;
+        width: 100%;
+        justify-content: start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .calc-info-price::before {
+        left: -0.5rem;
+    }
+
+    .calc-info-sort {
+        width: 100%;
+        margin: 2.5rem auto 1rem auto;
+    }
+
+    .calc-sort-label {
+        width: auto;
+    }
+
+    .calc-info-sort-label {
+        width: 100%;
+        border: 1px solid var(--clr-primary-lightblue);
+        border-radius: 48px;
+        color: var(--clr-primary-lightblue);
+        justify-content: normal;
+        place-content: center;
+    }
+
+    .calc-img-hide {
+        display: none;
+    }
+
+    .calc-img-mobile {
+        order: 2;
+    }
+
+    .noUi-base {
+        width: clamp(16.5rem, -0.833rem + 86.667vw, 29.5rem);
+    }
+
+    
 }
