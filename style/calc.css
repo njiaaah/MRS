@@ -197,6 +197,9 @@ ul {
     height: fit-content;
     background-color: var(--clr-greyscale-2);
     padding-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 #calc-programms-drop-down li {
@@ -384,6 +387,7 @@ ul {
     background-color: var(--clr-greyscale-2);
     border-radius: 0.5rem;
     display: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .calc-sort-list li {
