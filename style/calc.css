@@ -125,7 +125,7 @@ ul {
 .calc {
     display: grid;
     width: var(--content-width);
-    margin: 0 auto 2rem auto;
+    margin: 2rem auto 2rem auto;
 }
 
 .calc-wrap {
@@ -544,8 +544,9 @@ ul {
 
     .calc h2 {
         text-align: center;
-        white-space: nowrap;
         font-size: 28px;
+        white-space: pre-line;
+        line-height: 30px;
     }
 
     
