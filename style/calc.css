@@ -1,104 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-body {
-    
-    /* colors */
-
-    --clr-greyscale-0:#FFFFFF;
-    --clr-greyscale-2: #F2F4F8;
-    --clr-greyscale-4: #AEBCC6;
-    --clr-greyscale-6: #7E8385;
-    --clr-greyscale-8: #1E2020;
-
-    --clr-primary-darkblue: #16215B;
-    --clr-primary-blue: #1F299C;
-    --clr-primary-lightblue: #0373FF;
-
-    --clr-secondary-red: #FF4242;
-    --clr-secondary-cyan: #30D1FF;
-
-    /* fonts */
-
-    font-family: 'Geologica', sans-serif;
-
-    /* headings */
-
-    --fs-h1: 3.75rem;
-    --fs-h2: 3rem;
-    --fs-h3: 2.25rem;
-    --fs-h4: 2rem;
-    --fs-h5: 1.5rem;
-
-    /* body */
-
-    --fs-leed24: 1.5rem;
-    --fs-leed20: 1.25rem;
-    --fs-body16: 1rem;
-    --fs-body14: 0.875rem;
-
-    /* card */
-
-    --fs-card12: 0.75rem;
-    --fs-card-tag: 0.7815rem;
-    --fs-card-price: 1rem;
-
-    /* width */
-
-    --content-width-1280: 76rem; /* 1216px */
-    --content-width-720: 40.8331rem; /* 653.33px ? */
-    --content-width-320: 19rem; /* 304px ? */
-    --content-width: clamp(var(--content-width-720), -4.3886rem + 100.4857vw, var(--content-width-1280));
-
-
-}
 
 * {
     font-family: 'Geologica', sans-serif;
@@ -116,10 +15,6 @@ h2 {
     line-height: 3.3125rem;
     color: var(--clr-primary-darkblue);
     margin-bottom: 2rem;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .calc {
@@ -235,23 +130,23 @@ ul {
 }
 
 .calc-slider-container  .noUi-target {
-    --_slider-inner-width: clamp(10.5rem, -2.167rem + 26.459vw, 19rem);
+    --_slider-inner-width: clamp(10rem, -3.3333rem + 26.6667vw, 18.5rem);
+    /* --_slider-inner-width: 100%; */
     padding-inline: 1px;
     position: relative;
-    bottom: 0;
-    margin: 0 auto;
     background-color: none;
     border: none;
     position: absolute;
     bottom: 0;
-    left: 1rem;
+    left: 0rem;
+    transform: translate(0);
+    width: var(--_slider-inner-width) ;
 }
 
-.calc-slider-container .noUi-base, .calc-slider-container  .noUi-target {
-    height: 2px;
-    width: var(--_slider-inner-width);
-    transform: none;
+.calc-slider-container  .noUi-base {
+    transform: translateX(0px);
 }
+
 
 .calc-slider-wrap {
     background-color: var(--clr-greyscale-2);
@@ -540,7 +435,8 @@ ul {
     }
 
     .calc-slider-container .noUi-base {
-        width: clamp(16.5rem, -0.833rem + 86.667vw, 29.5rem);
+        width: clamp(16.5625rem, -0.1042rem + 83.3333vw, 29.0625rem);
+        transform: translateX(-5px);
     }
 
     .calc h2 {
@@ -549,6 +445,4 @@ ul {
         white-space: pre-line;
         line-height: 30px;
     }
-
-    
 }
