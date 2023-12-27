@@ -542,5 +542,11 @@ ul {
         width: clamp(16.5rem, -0.833rem + 86.667vw, 29.5rem);
     }
 
+    .calc h2 {
+        text-align: center;
+        white-space: nowrap;
+        font-size: 28px;
+    }
+
     
 }
