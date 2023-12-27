@@ -100,6 +100,10 @@ body {
 
 }
 
+* {
+    font-family: 'Geologica', sans-serif;
+}
+
 @media screen and (max-width: 720px) {
     body {
         --content-width: clamp(var(--content-width-320), 1.536rem + 87.32vw, var(--content-width-720));
@@ -455,6 +459,7 @@ ul {
 
     .calc-input-button-confirm {
         width: 100%;
+        font-family: 'Geologica', sans-serif;
     }
 
     .noUi-base {

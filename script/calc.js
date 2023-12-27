@@ -86,8 +86,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         toggleSort()
     })
 
+    $('.calc-sort-list-item').on('click', (evt)=>{
+        toggleSort()
+        document.querySelector('#calc-sort-label').innerHTML = evt.target.innerHTML
+    })
+
     function toggleSort() {
-        console.log('sorted')
         $('.calc-sort-list').slideToggle(250)
         $('.calc-img-sort-img').toggleClass('rotated')
     }
